@@ -1,0 +1,1889 @@
+/* Gaetan Langhade - V-Technologies - 2008 */
+
+/* **** LES STRUCTURES */
+
+*	{
+    margin: 0;
+    padding: 0;
+}
+body	{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    color: #000;
+    background: #f9f9f9;
+    text-align: center;
+}
+img,
+fieldset	{
+    border: none;
+}
+li	{
+    list-style-type: none;
+}
+a	{
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+label, input, select { vertical-align: middle; }
+
+input.submit,
+input.creer_agent
+{cursor: pointer;}
+
+a:hover,
+a:focus	{
+    text-decoration: none;
+}
+hr	{
+    position: absolute;
+    left: -4444px;
+}
+
+.both {clear:both;}
+
+.capitale {
+    text-transform: uppercase;
+}
+
+
+textarea {
+    overflow: auto;
+    font-family: inherit;
+    font-size: 1.1em;
+    overflow: auto;
+}
+input#input_data_message_objet {
+    margin: 5px 10px;
+    width: 715px;
+    font-size: 1.1em;
+}
+textarea#input_data_message_message {
+    height: 15em;
+    margin: 0 10px;
+    width: 715px;
+}
+/* fondations generales */
+.page	{
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    position: relative;
+}
+.simple_ajax .page {
+    width: auto;
+    margin: 10px 0 0 0;
+}
+.header	{
+    padding-top: 0;
+}
+
+#navigation	{
+    position: absolute; top: 169px; left: 10px; right: 0;
+    z-index: 3;
+}
+.contenu	{
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    clear: both;
+    margin-top: 1em;
+    overflow: visible;
+    padding: 2px 20px 17px;
+
+}
+
+.contenu #form_content {
+    padding: 5px  28px 0 0;
+    font-size: 1.1em;
+}
+.footer	{
+    background: #555;
+    padding: 1.2em 0.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    color: #fff;
+    font-size: 1.2em;
+}
+.footer	a:link,
+.footer	a:visited {
+    color: #fff;
+}
+
+/* fondations generales non identifie  */
+.header {
+    background: url(https://inscription.cnfpt.fr/cnfpt/css/images/header.jpg) no-repeat top left;
+    min-height: 207px;
+    margin-bottom: 1em;
+}
+.contenu .header {
+    background: none;
+    min-height: 0;
+    margin-bottom: 0;
+}
+
+
+/* colonnades */
+.gauche,
+.gauche2	{
+    float: left;
+    width: 22.6em;
+    max-width: 950px;
+    margin-top: 11px;
+}
+
+.centre1,
+.droite1	{
+    float: left;
+    width: 41.3em;
+    max-width: 950px;
+}
+
+.centre1 {
+    width: 37.3em;
+    margin-left: 4em;
+    margin-top: 20px;
+}
+
+.droite1	{
+    width: 26em;
+    max-width: 950px;
+    margin: 0.5em 0 1em 40px;
+}
+.gauche2	{
+    margin-top: 0; /* Jouve : -20px*/
+    max-width: 950px;
+}
+.centre2	{
+    float: left;
+    width: 51em; /* Jouve : 52.3em */
+    max-width: 950px;
+}
+.droite2	{
+    float: left;
+    width: 22.2em;
+    max-width: 950px;
+}
+.centre3	{
+    float: left;
+    width: 61.3em;
+    max-width: 950px;
+}
+.droite3	{
+    float: left;
+    width: 33.7em;
+    max-width: 950px;
+}
+.centre4	{
+    float: left;
+    width: 73.1em;
+    /*max-width: 950px;*/
+}
+
+.large	{
+    float: none;
+    width: auto;
+}
+
+.droite4	{
+    float: right;
+    width: 190px;
+    padding: 20px 0 0 0;
+}
+
+.droite4.ins_coll	{
+    /*float: left;*/
+    width: 22.1em !important;
+    /*max-width: 950px;
+    padding: 33px 0 0 0;*/
+}
+
+
+/* en-tete */
+
+/* - Me connecter - */
+.header p {
+    float: right;
+    margin: 16px 25px 0 0;
+    display: inline;
+}
+.header p a:link,
+.header p a:visited {
+    color: #353535;
+    font-weight: normal;
+}
+
+/* - Logo - */
+.header div p {
+    padding: 0;
+}
+.header div p img	{
+    position: absolute; top: 23px; left: 27px;
+}
+.header div p a	{
+    float: none;
+    padding: 0;
+}
+.header strong	{
+    /*display: none;*/ /* #18339 */
+}
+.header div	{}
+.header div p	{
+    float: none;
+}
+.header div p.delegation	{
+    width: 236px;
+}
+.header img	{
+    float: left;
+}
+
+
+/* navigation */
+#navigation a	{
+    display: block;
+    padding: 12px 5px;
+}
+
+
+
+/* classes transverses */
+.lienBarre	{
+    /*background: url(/cnfpt/css/images/fond-point.gif) center repeat-x;*/
+    text-align: right;
+}
+.adroite	{
+    text-align: right;
+}
+.ensuite	{
+    margin-top: 14px;
+}
+.suite	{
+    margin-top: 30px;
+}
+.desuite	{
+    padding-bottom: 8px;
+}
+.recuperation	{
+}
+.zoom	{
+    padding-left: 7px;
+}
+img.zoom	{
+    position: absolute;
+    width: 62px;
+    height: 63px;
+    background: url(/cnfpt/css/images/picto-loupe.png) top left no-repeat;
+    margin: -7px 0 0 -25px;
+}
+.pseudoListe	{
+    padding-left: 0;
+}
+.question	{
+    background: url(/cnfpt/css/images/fond-picto-interrogation.gif) 26px 26px no-repeat;
+}
+
+.question_reponse dt.question	{
+    background: none;
+}
+
+
+.droite4 .question	{
+    background-position: 8px 10px;
+}
+.localisation	{
+    background: url(/cnfpt/css/images/puce-cercle-noir.gif) top left no-repeat;
+    padding-left: 12px;
+}
+.entree	{
+    background: #f6f6f6;
+    padding: 20px 20px 0;
+}
+.entree	img { margin: 1em 0 1em -20px; }
+.acces	{
+    background: #f6f6f6;
+    padding: 1em 0.5em 2em 1.5em;
+}
+.correspondants	{
+    border-top: 1px solid #B2B2B2;
+    background: #EAEBEC;
+    /*background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;*/
+    padding: 30px 16px;
+}
+.reference	{
+    border-top: 1px solid #B2B2B2;
+    background: url(/cnfpt/css/images/fond-bloc-d.gif) bottom left no-repeat;
+    padding: 2px 16px 20px 16px;
+}
+.inscription	{
+    /*background: url(/cnfpt/css/images/puce-chevron.gif) left center no-repeat;*/
+    padding-left: 10px;
+}
+.compte	{
+    background: #f6f6f6;
+    padding-top: 9px;
+}
+.encompte	{
+    /*background: url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;*/
+    padding: 0 15px 20px;
+}
+
+/*--- Remplace les <br class="pusher" /> ---*/
+
+/* Pour les navigateurs récents */
+.enregistrement:before,
+.enregistrement:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+
+.enregistrement:after {
+    clear: both;
+}
+
+/* Pour IE 6/7 (trigger hasLayout) */
+.enregistrement {
+    zoom: 1;
+}
+
+.enregistrement	{
+    /*background: #F7fAFD url(/cnfpt/css/images/fond-bloc-e.gif) bottom left no-repeat;*/
+    padding: 27px 40px 22px 0;
+    background: #F6F6F6;
+}
+.etapes	{
+    background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) top left no-repeat;
+    margin: 12px 0 0 62px;
+}
+.etapesInt	{
+    background: url(/cnfpt/css/images/fond-illu-larges.jpg) bottom left no-repeat;
+    padding: 22px 0 110px 0;
+}
+.illustration_moncompte	{
+    background: #F5F5F5 url(/cnfpt/css/images/fond-bloc-i.gif) bottom left no-repeat;
+    margin: 12px 0 0 62px;
+}
+.illustration_moncompteInt	{
+    /*background: url(/cnfpt/css/images/fond-illu-moncompte.jpg) top left no-repeat;*/
+    padding: 273px 0 22px 0;
+}
+.texte{
+    /*background: #F7fAFD url(/cnfpt/css/images/fond-bloc-e.gif) bottom left no-repeat;*/
+    padding: 27px 0 22px 0;
+}
+
+
+/* affichage interne d'un popup modal */
+#lucarne	{
+    display: block;
+    position: absolute;
+    left: -4444px; /* -4444px */
+    top: 0;
+    z-index: 1000;
+    width: 226px;
+    padding-bottom: 9px;
+    /*background: url(/cnfpt/css/images/fond-lucarne.gif) bottom right no-repeat;*/
+}
+.canopee #lucarne	{
+    left: 70px;
+}
+.canopee2 #lucarne	{
+    left: 170px;
+    top: 470px;
+}
+#lucarne a img	{
+    position: absolute;
+}
+#lucarne .lucarne	{
+    background: url(images/fond-lucarne.png) no-repeat top left;
+    padding: 0 0 4px 15px;
+}
+
+#lucarne .lucarne ul{
+    padding: 15px 10px 4px 15px;
+}
+
+.marquage	{
+    border-bottom: 1px solid #B2B2B2;
+    padding-left: 18px;
+}
+.marquage h3	{
+    float: left;
+    padding-right: 10px;
+}
+#lucarne .lucarne a img	{
+    right: -4px;
+    top: -4px;
+}
+.lagent	{
+    padding: 0.5em 18px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+.lagent	a {
+    color: #000;
+    border: 1px solid #cccccc;
+    background: url('images/bouton-gris.png') repeat-x bottom left;
+    margin-left: 0;
+    padding: 3px 0.5em;
+    vertical-align: middle;
+    position: relative;
+    text-decoration: none;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+}
+
+.lagent	a:hover,
+.lagent	a:focus,
+.lagent	a:active	{
+    background: #eee !important;
+}
+
+
+
+
+
+#lucarne .lucarne p	{
+    text-align: center;
+}
+#lucarne .lucarne p a	{
+    padding-left: 10px;
+    /*background: url(/cnfpt/css/images/fond-lien.gif) bottom left no-repeat;*/
+    display: block;
+    position: relative;
+    top: -2px;
+    margin: auto;
+    width: 13em; /* necessaire pour IE */
+}
+#lucarne .lucarne p a span	{
+    padding-right: 10px;
+    /*background: url(/cnfpt/css/images/fond-lien.gif) bottom right no-repeat;*/
+    display: block;
+    padding-bottom: 3px;
+}
+
+#lucarne .lucarne p a span.TerSel	{
+    padding-right: 10px;
+    background: url(/cnfpt/css/images/fond-lien.gif) bottom right no-repeat;
+    display: block;
+    padding-bottom: 3px;
+}
+
+/* au fil des blocs : accueils */
+.entree p	{
+    margin-top: 17px;
+}
+.entree .padding_img	{}
+body.nodes .entree div.decoration,
+.entree ul.decoration	{
+    padding: 0 16px 66px 0;
+    /*background: url(/cnfpt/css/images/fond-illu-etroites.jpg) bottom left no-repeat;*/
+    margin: 0 -16px;
+    zoom: 1;
+}
+
+body.nodes .entree div.decoration ul a,
+body.nodes .entree div.decoration ul span {
+    color: #808080;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body.nodes .entree div.decoration ul a:hover {
+    text-decoration: underline;
+}
+
+body.nodes .entree div.decoration #menu_content li.active {
+    background-image: url(/cnfpt/css/images/puce-cercle.gif);
+}
+
+body.nodes .entree div.decoration li.active a,
+body.nodes .entree div.decoration li.active span {
+    color: #B05D10;
+}
+
+body.nodes .entree div.decoration li.active a:hover {
+    cursor: text;
+    text-decoration: none;
+}
+
+.entree .lienBarre {
+    border-top: 10px solid #eeeeee;
+    margin: 1em 0 0 -20px;
+    width: 226px;
+}
+.entree .lienBarre a	{
+    background: #8f6c7c;
+    border-left: 10px solid #c7b6be;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    padding: 0.7em 14px;
+}
+.entree .lienBarre a:hover,
+.entree .lienBarre a:focus,
+.entree .lienBarre a:active	{
+    background: #763B51;
+}
+
+
+.centre1 h2.partie,
+.droite1 h2	{}
+
+.textes_infos_fip {
+    padding-top: 1em;
+}
+
+.textes_infos_fip h2 {
+    font-family: 'HelveticaNarrow', Arial, Helvetica, sans-serif;
+    color: #8a3f69;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0.8em 0 0 0;
+    padding: 0 0 0.2em 0;
+    border-bottom: 1px solid #eeedec;
+}
+.entree .textes_infos_fip h2 {
+    font-family: 'HelveticaNarrow-Bold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #595857;
+    text-transform: none;
+    font-size: 1.9em;
+    margin: 0.5em 0 0 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+.textes_infos_fip h3 {
+    color: #33518d;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 15px 0 0 37px;
+    padding: 0 0 0 15px;
+    border-bottom: 1px #cdcdcb solid;
+    background: transparent url(/cnfpt/css/images/puce_cercle_bleu_fonce.gif) no-repeat left center;
+}
+.textes_infos_fip h4 {
+    color: #33518d;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 15px 0 0 37px;
+    padding: 0 0 0 0px;
+}
+.textes_infos_fip h5 {
+    color: #000;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin: 15px 0 0 37px;
+    padding: 0 0 0 0px;
+    border-bottom: 1px #cdcdcb solid;
+}
+
+.textes_infos_fip h3 .top, .textes_infos_fip h4 .top, .textes_infos_fip h5 .top {
+    float: right;
+    padding: 5px 0 0 0;
+}
+.textes_infos_fip p {
+    font-size: 1.2em;
+}
+
+.textes_infos_fip dl {
+    font-size: 1.3em;
+}
+
+.textes_infos_fip .telecharger dt {
+    background: transparent url(/cnfpt/css/images/puce-petit-cercle_gris_clair.gif) no-repeat 0 5px;
+}
+
+.textes_infos_fip dd a {
+    font-size: .9em;
+}
+
+.textes_infos_fip p {
+    margin: 5px 0 5px 47px;
+    padding: 0 0 0 5px;
+}
+
+.textes_infos_fip .telecharger, .textes_infos_fip ul {
+    margin: 15px 0 0 52px;
+}
+
+.textes_infos_fip ol {
+    margin: 15px 0 0 72px;
+}
+
+.textes_infos_fip .telecharger dt{
+    padding: 0 0 0 10px;
+    color: #7e7e7e;
+    font-weight: bold;
+}
+.textes_infos_fip ul a{
+    color: #7e7e7e;
+    font-weight: bold;
+}
+.textes_infos_fip .telecharger dd {
+    padding: 0 0 5px 20px;
+}
+.textes_infos_fip ul li {
+    padding: 0 0 0 10px;
+    background: transparent url(images/bullet-black-1.png) no-repeat 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+.textes_infos_fip ol li{
+    list-style-type:decimal;
+    font-size: 1.2em;
+}
+.textes_infos_fip ol li li{
+    list-style-type:decimal;
+    font-size: 1em;
+}
+.textes_infos_fip ul li li{
+    padding: 0 0 5px 0px;
+    background: none;
+    liste-style: square;
+    font-size: 1em;
+}
+
+.textes_infos_fip .savoir_plus {
+    margin: 0 0 0 37px;
+    padding: 10px 0 10px 15px;
+    background: #f2f5fc;
+}
+
+.textes_infos_fip .savoir_plus dt {
+    background: transparent url(/cnfpt/css/images/puce-petit-cercle_gris_clair.gif) no-repeat 0 5px;
+}
+
+.textes_infos_fip .savoir_plus dt {
+    padding: 0 0 0 10px;
+    color: #7e7e7e;
+    font-weight: bold;
+}
+
+.textes_infos_fip .savoir_plus dd {
+    padding: 0 0 5px 20px;
+}
+
+
+.textes_infos_fip .nav_infos {
+    margin: 30px 0 0 37px;
+    border-bottom: 1px #cdcdcb solid;
+}
+
+.textes_infos_fip .nav_infos .top {
+    float: right;
+    position: relative;
+    top: -4px;
+    right: 0;
+    padding: 5px 0 0 0;
+}
+
+.textes_infos_fip .nav_infos p {
+    margin: 0;
+    padding: 0;
+}
+
+.textes_infos_fip .nav_infos p a {
+    color: #b05f10;
+    text-decoration: none;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.textes_infos_fip .nav_infos p a.precedent {
+    margin: 7px 0 0 0;
+    float: left;
+}
+
+.textes_infos_fip .nav_infos p a.suivant {
+    margin: 7px 0 0 0;
+    float: right;
+}
+
+
+
+.centre1 div.dates	{
+    padding: 15px 15px 20px;
+    margin-left: 0;
+    background: #F6F6F6;
+}
+.centre1 h3.repartie	{
+    margin-top: 20px;
+}
+.centre1 p	{
+    margin-top: 22px;
+    overflow: hidden;
+}
+.centre1 .lienBarre	{
+    margin-left: 35px;
+}
+.centre1 p img	{
+    float: left;
+    margin: 0 10px 5px 0;
+}
+.droite1 .acces div	{
+    margin-bottom: 10px;
+}
+
+.droite1 .acces .pseudoListe	{
+    margin: 0.5em 0;
+}
+.droite1 h2.part	{
+    margin-top: 27px;
+}
+.droite1 .correspondants	{
+    margin-left: 35px;
+    padding-top: 13px;
+}
+.gauche h2.part	{
+    margin-top: 20px;
+    padding-left: 10px;
+}
+.reference .impart	{
+    margin-left: -6px;
+}
+.gauche .reference p	{
+    margin-top: 17px;
+}
+.centre1 h3.impart	{
+    /*margin-left: 45px;*/
+}
+.centre1 .inscription	{
+    margin: 5px 0 0 0;
+}
+.centre1 div.rebord	{
+    margin: 30px 0 0 10px;
+    padding-left: 35px;
+    background: url(/cnfpt/css/images/fond-picto-interrogation.gif) top left no-repeat;
+}
+.centre1 .rebord div	{
+    border-left: 1px solid #B2B2B2;
+    margin: 0;
+    padding-top: 17px;
+}
+.rebord h2.partie	{
+    margin: 0;
+}
+.rebord h3.impart	{
+    margin-left: 10px;
+}
+.rebord h4.pseudoListe	{
+    margin: 12px 0 0 10px;
+}
+.rebord p	{
+    margin: 17px 0 0 25px;
+}
+.rebord p.lienBarre	{
+    margin: 11px 0 0 0;
+    position: relative;
+    top: 6px;
+}
+.droite1 .compte	{}
+.droite1 h2.cartouche	{}
+.droite1 h2.premier	{
+    position: relative;
+    top: -14px;
+}
+.droite1 .correspondant	{
+    margin-top: 7px;
+    padding-left: 15px;
+}
+.droite1 .encompte .adroite	{
+    margin: 10px 0;
+}
+.droite1 .tableau	{
+    margin: 10px 0;
+}
+.detail	{
+    /*background: url(/cnfpt/css/images/fond-tableau.gif) top left no-repeat;*/
+    margin: 1em 0;
+    padding: 0 0 0 2em;
+}
+.detail p	{
+    margin-top: 3px;
+}
+.compte .premier	{
+    border: 0;
+}
+.detail h4	{
+    float: left;
+    position: relative;
+    left: -42px;
+    margin-right: -42px;
+    background: #EAEBEC;
+    padding: 0 2px;
+}
+
+
+
+/* au fil des blocs : pages interieures */
+.ariane	{}
+.impression	{
+    text-align: right;
+    padding-right: 36px;
+}
+.ariane + .impression	{
+    position: absolute; top: 20px; right: 20px;
+    padding-right: 0;
+}
+
+.centre3 h1	{
+    padding-left: 37px;
+}
+.demarger	{
+    margin-left: -50px;
+}
+.consigne	{
+    margin: 18px 0 0 69px;
+    padding-bottom: 9px;
+}
+.champ{
+    font-size: 1em;
+}
+.champ,
+.serie	{
+    overflow: hidden;
+    margin-top: 8px;
+    zoom: 1;
+}
+.input_autocomplete {
+    position:  relative;
+    overflow: visible;
+}
+
+.serie .serie { margin-top: 0; margin-right: 35px;}
+
+.champ_auto_complete {
+    overflow: visible;
+    clear: both;
+    position: relative;
+    z-index: 5;
+}
+#onglets .champ	{
+    position: relative;
+}
+
+
+
+#onglets .champ.ico_session {
+    line-height: 31px;
+}
+
+#onglets .champ.ico_session label span {
+    display: inline;
+    margin: 0 0 0 152px;
+    padding: 0 0 0 0;
+    width: 35px;
+    height: 31px;
+    background: url(/cnfpt/css/images/fnd_session.png) no-repeat left top;
+}
+.input.text {}
+.dateduau1 {display:inline;overflow:auto;width:150px;}
+.dateduau2 {display:inline;overflow:auto;width:150px;}
+#onglets .champ	.aide	{
+    position: relative;
+    left: -200px;
+    float: right;
+    width: 15px;
+    height: 15px;
+}
+
+#onglets .champ span {
+    width: 220px; /* Jouve : 270px */
+    float: left;
+}
+/*
+* http://vt.dev.national.cnfpt.vtech.fr/cnfpt/maildoc_inter/index/courriels/IFI/template:mail_inter_agent/mode:html
+*/
+#onglets .champ span.mceEditor  {
+    width: 710px;
+}
+#onglets .date span,
+#onglets .champ p span,
+#onglets .date .date-picker-control	{
+    width: auto;
+    float: left;
+}
+
+#onglets .champ p span {
+    float:none;
+}
+
+#onglets .serie	{}
+#onglets .voir_fiche{
+    float: right;
+    padding-right:185px;
+    font-size: 1.1em;
+    background:transparent url(/cnfpt/css/images/fond-fieldset-large.gif) repeat-x scroll 100% 7px;
+    margin: 40px 0 20px 0;
+    position: relative;
+    left: 23px;
+    width: auto;
+}
+#onglets .voir_fiche a{
+    background: #F7FAFD;
+    padding: 0 5px;
+}
+.serie p	{
+    float: right;
+    display: inline;
+}
+.serie .contenu_serie	{
+    float: left;
+    display: inline;
+    overflow: auto;
+    zoom: 1;
+    width: 342px;
+}
+
+
+.serie p strong,
+.serie div strong	{
+    float: left;
+    font-size: 1.3em;
+    width: 13.1em;
+    margin-right: 10px;
+    text-align: right;
+}
+.serie p.cat strong {
+    width: 8.1em;
+}
+.serie .etat	{
+    float: right;
+    width: auto;
+    margin: 0 0 0 20px;
+}
+
+.serie .session	{
+    float: left;
+    width: auto;
+    margin: 0 0 0 110px !important;
+    margin: 0 0 0 50px;
+}
+.serie .nomarge{
+    margin: 0 0 0 72px!important;
+    margin: 0 0 0 72px;
+}
+.serie .session label	{
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+.serie .session input	{
+    float: left;
+    width: 70px;
+    margin: 0 0 0 0px;
+}
+
+.serie .cat .englobe,
+.serie .etat .englobe {
+    float: left;
+    width: auto;
+}
+
+.serie .cat .englobe {
+    margin-right: 10px;
+}
+
+.serie .cat input,
+.serie .etat input {
+    float: none;
+    width: auto;
+    margin: 0 5px 0 10px;
+    /*display: inline;*/
+    border: none;
+    width: 13px;
+    vertical-align: middle;
+
+}
+
+.serie .cat label,
+.serie .etat label	{
+    float: none;
+    margin: 0;
+    vertical-align: middle;
+    font-weight: normal;
+}
+.serie .loc	{
+    float: left;
+    width: auto;
+    margin: 0 0 0 10px;
+}
+
+.serie .loc select	{
+    width: 165px;
+}
+.serie .localisation	{
+    float: left;
+    display: inline;
+    background: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0 10px 0 0;
+}
+.serieArme{
+	overflow: hidden;
+    margin-top: 8px;
+    zoom: 1;
+}
+.serieArme input{
+	width :2em;
+}
+.serieArme label{
+	width :2em;
+	font-weight: bold;
+    font-size: 1.3em;
+    margin-right : 10px;
+}
+.auchamp	{
+    padding-left: 170px;
+    margin-top: 8px;
+}
+.demarquer	{
+    /*overflow: hidden;*/
+    /*position: relative;*/
+}
+#liste_contact_update {
+    zoom: 1;
+}
+#onglets .demarquer	{
+    margin: 0;
+    padding-right: 86px;
+}
+.validation	{
+    float: right;
+}
+.affichage	{
+    /*	overflow: hidden;*/
+    margin: 1em 0;
+    min-height: 30px;
+}
+.show	{
+    /*	overflow: hidden;*/
+    margin: 1em 0;
+    min-height: 30px;
+}
+.validation span	{
+    /*margin-left: 10px;*/
+    float: left;
+    z-index: 2;
+}
+.validant span	{
+    padding-top: 1px;
+}
+.affichage span	{
+    float: right;
+    margin-bottom: 10px;
+    /*background: url(/cnfpt/css/images/fond-bouton.gif) top left no-repeat;*/
+}
+.show span	{
+    float: right;
+    margin-bottom: 10px;
+    /*background: url(/cnfpt/css/images/fond-bouton.gif) top left no-repeat;*/
+}
+.validation span.effacer	{}
+.centre2 h1	{
+    margin-left: 37px;
+    padding-left: 15px; /* 10px si problemes... */
+}
+.centre2 h2.empart	{
+    margin: 20px 0 0 47px;
+}
+.parametre	{
+    padding-top: 12px;
+}
+
+.resultats	{}
+.large .resultats	{
+    width: auto;
+}
+
+
+.resultats strong	{
+    float: left;
+}
+.resultats p	{
+    width: 40%;
+    text-align: center;
+    float: left;
+}
+.resultats div	{
+    float: right;
+    position: relative;
+    top: 6px;
+}
+
+
+.centre4 #onglets .demarquer	{
+    padding: 0;
+    margin-top: 1em;
+}
+
+#sess_annulation label:first-child { display: block; }
+
+.droite3 .etapes p,
+.leCritere	{
+    background: url(images/barre.png) top left no-repeat;
+    padding: 2em 18px 1em;
+}
+.droite3 .etapes p.premier,
+.droite4 .premier	{
+    margin-top: 0;
+}
+.illustration	{
+    background: #EAEBEC;
+    /*background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;*/
+}
+.droite2 .illustration	{
+    margin: 12px 0 0 26px;
+    text-align: center;
+    border-top: 1px solid #D9D9D9;
+    padding-left: 1px;
+    padding-bottom: 24px;
+    /*height: 550px;*/
+}
+.droite4 .illustration  {
+    background: #F5F5F5 url(/cnfpt/css/images/fond-bloc-h.gif) bottom left no-repeat;
+    padding-top: 0;
+    padding-bottom: 24px;
+    /*min-height: 450px;*/
+}
+.droite4 .texte  {
+    background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;
+   padding: 10px;
+}
+.droite4 .illustration .illustration {
+    background: none;
+    margin-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1em;
+}
+
+.droite4 .illustration.photo	{
+    padding-top: 0;
+}
+
+.droite4 .illustrante	{
+    /*border-top: 1px solid #D9D9D9;*/
+    padding: 0;
+    /*margin-top: 33px;*/
+    text-align: center;
+}
+.classeur{
+    background: #fff;
+    margin: 0 0 -1px 44px;/*33px 0 0 44px*/
+    border: 1px solid #D9D9D9;
+    border-right: 0;
+    padding-bottom: 18px;
+    line-height: 20px;
+}
+.classeur p{
+    padding: 0 39px;
+    margin-top: 13px;
+    font-size: 1.1em;
+}
+.classeur p.vide{
+    background: url(/cnfpt/css/images/ico-classeur.gif) no-repeat 10px 50%;
+}
+.criteres	{
+    background: #F7FAFD;
+    margin: 0;/*33px 0 0 44px*/
+    border-right: 0;
+    padding-bottom: 18px;
+}
+.criteres p	{
+    padding: 0 15px;
+    margin-top: 0;
+}
+.criteres p.modification	{
+    margin: 14px 0 0 29px;
+    border-top: 1px solid #D9D9D9;
+    padding: 9px 0 0 0;
+}
+.instance	{
+    padding: 8px;
+}
+.etape_validation .instance {
+    padding: 8px 8px 8px 170px;
+    background: url(/cnfpt/css/images/fond-picto-agent-inscrit.gif) no-repeat 130px 50%;
+}
+.relance	{
+    border-bottom: 1px solid #E8EAEB;
+    margin: 16px 0 17px -71px;
+    overflow: hidden;
+}
+.relance a	{
+    float: right;
+    padding-left: 14px;
+    background: url(/cnfpt/css/images/fond-bouton-relancer.gif) top left no-repeat;
+}
+.relance a span	{
+    float: left;
+    padding: 1px 30px 2px 0;
+    background: url(/cnfpt/css/images/fond-bouton-relancer.gif) top right no-repeat;
+}
+
+
+.relance_bleu	{
+    border-bottom: 1px solid #E8EAEB;
+    margin: 16px 0 17px -71px;
+    overflow: hidden;
+}
+.relance_bleu a	{
+    text-decoration: none;
+    float: right;
+    padding-left: 14px;
+    background: url(/cnfpt/css/images/fond-bouton-valider.gif) top left no-repeat;
+}
+.relance_bleu a span	{
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    padding: 1px 30px 2px 0;
+    background: url(/cnfpt/css/images/fond-bouton-valider.gif) top right no-repeat;
+}
+.retour,
+.abandon	{
+    float: left;
+    margin-left: 10px;
+    /*background: url(/cnfpt/css/images/fond-bouton-retour.gif) top left no-repeat;*/
+    padding-left: 0;
+}
+.retour span,
+.abandon span	{
+    float: left;
+}
+
+
+#territoire_content .retour span {
+    padding: 0;
+}
+
+#onglets div.longlet #territoire_content .demarquer .span_a_en_input input {
+    padding: 3px 13px 3px 13px !important;
+}
+
+.abandon	{
+    /*background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);*/
+}
+.abandon span	{
+    /*background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);*/
+}
+
+.validation .inputabandon	{
+    /*background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);*/
+    padding-left: 10px;
+}
+.validation .abando	{
+    margin-right:10px;
+    /*background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);*/
+}
+
+.nouvel {
+    float: right;
+}
+
+.creer_agent  {
+    float: left;
+    /*height: 17px;
+    margin: 0 10px 0 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    background: url(/cnfpt/css/images/fond-bouton-creer.gif) top left no-repeat;*/
+}
+
+input.creer_agent  {
+    /*float: left;
+    height: 17px;
+    margin: 0 10px 0 0px;
+    padding-left: 20px;
+    text-decoration: none;*/
+    /*background: url(/cnfpt/css/images/fond-bouton-creer.gif) top left no-repeat !important;*/
+}
+
+.creer_agent span,
+span input.creer_agent {
+    color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #7f0e42;
+    background: #7f0e42;
+    padding: 3px 1em;
+    cursor: pointer;
+    margin-left: 1em;
+    overflow: visible;
+    font-weight: normal;
+    zoom: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=submit]:active	{
+    background: #b3145e;
+}
+
+.creer_agent a {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #7f0e42;
+    background: #7f0e42;
+    padding: 3px 1em;
+    cursor: pointer;
+    margin-left: 1em;
+    overflow: visible;
+    font-weight: normal;
+    zoom: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    text-decoration: none;
+}
+.creer_agent a:hover,
+.creer_agent a:focus,
+.creer_agent a:active {
+    text-decoration: none;
+    background: #b3145e;
+}
+
+.creer_contact {
+    float: left;
+    /*height: 17px;*/
+    /*margin: 0 10px 0 20px;
+    margin-left: 1em;
+    padding-left: 20px;*/
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    border: 1px solid #7f0e42;
+    padding: 3px 1em;
+    cursor: pointer;
+    overflow: visible;
+    font-weight: normal;
+    zoom: 1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #7f0e42;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.creer_parcours {
+    float: left;
+    height: 17px;
+    margin: 0 10px 0 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    background: url(/cnfpt/css/images/fond-bouton-creer_parcours.gif) top left no-repeat;
+}
+
+.creer_parcours .demarrer	{
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 10px 0 5px;
+    color: #3397cf;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: url(/cnfpt/css/images/fond-bouton-creer.gif) top right no-repeat;
+}
+.creer_pdf {
+    float: left;
+    height: 17px;
+    margin: 0 0px 0 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    background: url(/cnfpt/css/images/fond-bouton-pdf.gif) top left no-repeat;
+}
+
+.creer_csv {
+    float: left;
+    height: 17px;
+    margin: 0 10px 0 0px;
+    padding-left: 30px;
+    text-decoration: none;
+    background: url(/cnfpt/css/images/fond-bouton-csv.gif) top left no-repeat;
+}
+.creer_contact span	{
+    /*float: left;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 10px 0 0px;*/
+    /*color: #9cc463;*/
+    /*color: #3397cf;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: url(/cnfpt/css/images/fond-bouton-creer.gif) top right no-repeat;*/
+}
+
+
+.replier {
+    float: left;
+    height: 17px;
+    margin: 0 10px 0 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    background: url(/cnfpt/css/images/fond-bouton-effacer.gif) top left no-repeat;
+}
+.replier span	{
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    padding: 0 10px 0 10px;
+    /*color: #9cc463;*/
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: url(/cnfpt/css/images/fond-bouton-effacer.gif) top right no-repeat;
+}
+
+
+.illustration.illustrante .nom_agent {
+    margin: 40px 0 0 0;
+    text-align: left;
+}
+
+.illustration.illustrante .nom_agent p.leCritere {
+    /*margin: 0;
+    padding: 0 29px 5px 30px;
+    font-size: 1.1em;
+    color: #007DC3;
+    background:transparent url(/cnfpt/css/images/fond-etape.gif) no-repeat scroll left top;*/
+}
+
+.leCritere a {
+    text-decoration: underline !important;
+}
+
+.illustration.illustrante .nom_agent p.nom {
+    line-height: 22px;
+    margin-left: 5px;
+    padding: 0 0 0 25px;
+    font-size: 1.1em;
+    background: url(/cnfpt/css/images/picto-agent-1.gif) no-repeat 0px -2px;
+}
+
+.illustration.illustrante .nom_agent dl {
+    font-size: 1em;
+}
+
+.illustration.illustrante .nom_agent dd {
+    font-weight: normal;
+}
+
+.illustration.illustrante .nom_agent dt {
+    margin: 5px auto auto auto;
+}
+
+.coordonnees {
+    margin: 30px 0 0 0;
+    padding: 0 10px 10px 29px;
+}
+
+.coordonnees p {
+    margin: 0 0 5px 0;
+    color:#000;
+    font-weight: normal;
+}
+
+.coordonnees p span {
+    color: #7F0E42;
+    font-weight:bold;
+}
+
+
+.coordonnees p a {
+    text-decoration: none;
+}
+
+
+.centre4 #onglets.txt .onglet {
+    padding: 0 0 20px 0px;
+}
+
+.centre4 #onglets.txt .onglet .longlet {
+    /*height: auto !important;
+    height: auto;
+    height: 140px;
+    min-height: 140px;*/
+}
+
+.centre4 #onglets.txt .onglet .longlet h4 {
+    margin: 10px 0 0 1px;
+    background: transparent url(/cnfpt/css/images/fond-fieldset-large.gif) no-repeat left top;
+    font-size: 1em;
+}
+
+.centre4 #onglets.txt .onglet .longlet h4 span {
+    position: relative;
+    top: -9px;
+    padding: 0 5px 0 84px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: none;
+    color: #a7601e;
+    background: #F7FAFD url(/cnfpt/css/images/fond-titre_marron.gif) no-repeat 0 5px;
+}
+.centre4 #onglets.txt .onglet .longlet .tableau_demande_dispense h4.legendaire {
+    padding: 0;
+    margin: 10px 0 0 -29px;
+    width: 706px;
+}
+.centre4 #onglets.txt .onglet .longlet h4.legendaire span {
+    font-size: 1.3em;
+}
+.centre4 #onglets.txt .onglet .longlet p {
+    margin: 0 100px 5px 86px;
+    font-size: 1.1em;
+    /*color: #00246F;*/
+}
+
+
+
+
+.centre4 #onglets .bloc_gauche {
+    float: left;
+    width: auto;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+.centre4 #onglets .bloc_gauche fieldset {
+    padding: 12px 0 0px 55px;
+    width: 200px;
+}
+
+.centre4 #onglets .bloc_gauche fieldset fieldset {
+    padding: 0;
+    width: 200px;
+    background: none;
+}
+.centre4 #onglets .bloc_gauche fieldset fieldset legend {
+    visibility: hidden;
+}
+
+.centre4 #onglets .bloc_gauche fieldset fieldset .radio {
+    clear: both;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin: 0 0 0 10px;
+    text-align: left;
+    border: 0;
+}
+.centre4 #onglets .bloc_gauche fieldset fieldset  label {
+    margin-left: 5px;
+    text-align: left;
+    width: 120px;
+}
+
+.centre4 #onglets .bloc_gauche .champ {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+}
+.centre4 #onglets .bloc_gauche .champ .input.text {
+    width: auto;
+}
+.centre4 #onglets .bloc_gauche .champ .input.text input {
+    width: 198px;
+}
+
+.centre4 #onglets .bloc_gauche .champ .submit {
+    float: right;
+    margin: 10px 0 0 0;
+}
+.centre4 #onglets .bloc_gauche .champ .submit input {
+    width: auto;
+    cursor: pointer;
+}
+
+.centre4 #onglets .bloc_droite {
+    float: right;
+    width: auto;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 53px;
+}
+
+.centre4 #onglets .bloc_droite ul.arboresence {
+    margin: 10px 0 0 0;
+    padding: 0 4px 0 0;
+}
+
+
+#connect_admin label {
+    display: block;
+    float: none;
+}
+#connect_admin #mdp {
+    font-size:1em;
+    width: 118px;
+    float: none;
+    border: 1px solid #808080;
+}
+
+#connect_admin input {
+    margin-bottom: 10px;
+}
+#connect_admin input.valider {
+    clear: both;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 60px;
+    margin-bottom: 0;
+}
+
+
+.form_main div.file-group .group-content div.object img.file {
+    display: inline;
+    margin: 5px 0 5px 5px !important;
+}
+.form_main div.file-group .group-content div.object .tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.input_ok {
+    /*display: inline-block;
+    margin-left: 10px;
+    padding-left: 10px;*/
+    /*background: url(/cnfpt/css/images/fond-bouton.gif) top left no-repeat;*/
+}
+
+.input_ok input {
+    display: inline-block;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    border: 0;
+    color: #fff;
+    overflow: visible;
+    cursor: pointer;
+    /*background: #007DC3 url(/cnfpt/css/images/fond-bouton.gif) top right no-repeat;*/
+}
+
+/*
+ * affichage du layer des contact a qui envoyer un mail
+ * http://vt.dev.national.cnfpt.vtech.fr/tableaux/inter_inscription_agents
+**/
+#overlay {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+#overlay .contenu_overlay {
+    position: absolute;
+    height: 300px;
+    width: 500px;
+    overflow: auto;
+    left: 50%;
+    top: 50%;
+    margin: -150px 0 0 -250px;
+    background: #fff;
+    border: 1px solid #555;
+    padding: 20px 10px 10px 10px;
+    -moz-box-shadow: 1px 1px 12px #555;
+    -webkit-box-shadow: 1px 1px 12px #555;
+    box-shadow: 1px 1px 12px #555;
+    text-align: left;
+}
+#overlay .contenu_overlay .fermer {
+    position: absolute;
+	z-index: 999;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    padding: 0;
+    text-indent: -999em;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 0.85em;
+    overflow: hidden;
+    background: transparent url(/space/img/css/fnd/livesearch/icon-reset.gif) no-repeat 0 0;
+}
+
+#overlay .contenu_overlay .fermer:hover {
+    background-position: 0 -12px;
+}
+#overlay.large .contenu_overlay {
+    height: 600px;
+    width: 800px;
+    margin: -300px 0 0 -400px;
+}
+
+body + pre {
+    font-size: 1.5em;
+    color: #fff;
+    background: #333;
+}
+
+form#FormGenMain #TabHebergement .input.checkbox input{
+    background: #FFF url(/space/img/css/fnd/shadow.gif) repeat-x scroll center top;
+    border-color: #7C7C7C #C3C3C3 #DDD #C3C3C3;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1em;
+    color: #333;
+    margin: 0 70% 0 0;
+    float: right;
+}
+
+form#FormGenMain #TabHebergement .input.checkbox label {
+    display: block;
+    float: left;
+    width: 20%;
+    padding: 0;
+    margin: 0 2% 0 1%;
+    font-size: 1em;
+    text-align: right;
+    font-weight: bold;
+    display: inline;
+    color : #7F0E42 !important;
+}
+
+div.hebergement-liste {
+	min-width:145px;
+	width: auto !important; 
+	width: 145px;
+}
+
+img.hebergement-point-exclamation {
+	margin-left: 5px;
+	vertical-align: middle;
+	margin-bottom: 2px;
+}
+
+.hors_region_checkgroup > div.group-content {
+	padding-left: 190px !important;
+}
+
+#DivFieldConfigConfigConfig0HorsRegion0XmlattrsSuiviHorsRegion {
+	float: left;
+	width: 25%;
+}
+
+#DivFieldConfigConfigConfig0HorsRegion0XmlattrsSuiviHorsRegion input {
+	float: right;
+}
+
+#DivFieldConfigConfigConfig0HorsRegion0XmlattrsSuiviHorsRegion label {
+	color: #7F0E42 !important;
+	font-weight: bold;
+	font-size: 1em;
+	float: left;
+}
+
+.formidable #suivi_hors_region div.listStructures {
+	float: left;
+	width: 100% !important;
+}
+
+.formidable #suivi_hors_region div.strucColumn {
+	float: left;
+	width: auto;
+}
+
+#strucColumn1 {
+	width: 32% !important;
+}
+
+#strucColumn2 {
+	width: 27% !important;
+}
+
+#strucColumn3 {
+	width: 41% !important;
+}
+
+.formidable #suivi_hors_region div.structure {
+	display: block;
+	padding-bottom: 3px;
+}
+
+.formidable #suivi_hors_region div.structure label,
+#DivFieldConfigConfigConfig0HorsRegion0XmlattrsSuiviHorsRegion label {
+	width: 100% !important;
+	max-width: 100% !important;
+	float: none !important;
+}
+
+.formidable #suivi_hors_region div.structure input {
+	width: auto !important;
+	float: right;
+	clear: both;
+	margin-right: 15px;
+}
+
+.formidable #suivi_hors_region #suiviEnregistrerParametrage, .formidable #suivi_hors_region button{
+	color: #FFF;
+	font-size: 1.2em;
+	border: 1px solid #7F0E42;
+	background: #7f0e42;
+	padding: 3px 1em;
+	cursor: pointer;
+	margin-left: 1em;
+	overflow: visible;
+	font-weight: normal;
+	border-radius: 3px;
+}
+
+.formidable #suivi_hors_region #accordSimplifieAnnuler, .formidable #suivi_hors_region a{
+	color: #FFF;
+	font-size: 1.2em;
+	border: 1px solid #7F0E42;
+	background: #7f0e42;
+	padding: 3px 1em;
+	cursor: pointer;
+	margin-left: 1em;
+	overflow: visible;
+	font-weight: normal;
+	border-radius: 3px;
+}
+
+.formidable #suivi_hors_region .affichage {
+	margin-top: 160px;
+}
+
+.formidable #suivi_hors_region .affichage span.butSelect button {
+	float: left;
+}
+
+.formidable #suivi_hors_region .affichage #suiviEnregistrerParametrage {
+	width: auto !important;
+	max-width: auto !important;
+}
+
+.formidable #suivi_hors_region .show #suiviEnregistrerParametrage {
+	width: auto !important;
+	max-width: auto !important;
+}
+
+.lienPortefeuille {
+	font-weight: bold;
+    padding-left: 50px;
+}
+
+.fixedWidth {
+	width: 340px;
+}

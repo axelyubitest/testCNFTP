@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>CNFPT : Inscription en ligne</title>
+
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Copyright" content="CNFPT 2008 - 2011 Tous droits réservés">
+<meta name="Generator" content="V-Technologies / Ligeo - http://www.vtech.fr">
+<meta name="Author" content="V-Technologies - http://www.vtech.fr">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Language" content="fr-FR">
+<link href="https://inscription.cnfpt.fr/favicon.ico" type="image/x-icon" rel="icon"><link href="https://inscription.cnfpt.fr/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<meta name="robots" content="noindex,nofollow">
+
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/modalbox.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/structures.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/articulations.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/contenus.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/icones.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/datepicker.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/cms.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/pages-rules.css" media="all">
+	<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/cake.css" media="all">
+
+<link rel="stylesheet" type="text/css" href="CNFPT%20Inscription%20en%20ligne_fichiers/print.css" media="print">
+<!--[if gte IE 5.5]>
+    <link type="text/css" rel="stylesheet" href="/cnfpt/css/limite.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" href="/cnfpt/css/ie6.css" media="screen" type="text/css" />
+    <script type="text/javascript">var isIE6 = 1;</script>
+<![endif]-->
+<!--[if IE 7]>
+    <link rel="stylesheet" href="/cnfpt/css/ie7.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+    <link rel="stylesheet" href="/cnfpt/css/ie8.css" media="screen" type="text/css" />
+<![endif]-->
+<!--[if IE 9]>
+    <link rel="stylesheet" href="/cnfpt/css/ie9.css" media="screen" type="text/css" />
+<![endif]-->
+        
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/33faa6028d.txt"></script><script src="CNFPT%20Inscription%20en%20ligne_fichiers/nr-1210.js"></script><script type="text/javascript" async="" src="CNFPT%20Inscription%20en%20ligne_fichiers/ga.js"></script><script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/protoaculous.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/effects.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/modalbox.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/datepicker_fr.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/datepicker.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/onglets.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/menu.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/page.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/csrf.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/preferencesCookies.js"></script>
+	<script type="text/javascript" src="CNFPT%20Inscription%20en%20ligne_fichiers/pliages.js"></script>
+        
+</head><body id="idBody" class="pas_de_gestionnaire portail"><div id="sliding-popup" style="height: auto; width: 100%;" class="sliding-popup-bottom disable-modal-cookies"><button id="gestion-cookie" type="button" class="eu-cookie-withdraw-tab" onclick="enableDisableCookies()">Gestion des cookies</button>
+    <div id="eu-cookie-compliance-banner" class="eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--categories">
+      <div class="popup-content info">
+        <div id="popup-text">
+           <p>Bienvenue sur Inscription.cnfpt.fr, un site de CNFPT.<br> 
+		   Ce site utilise des cookies pour faciliter votre navigation 
+ultérieure sur le site et pour en mesurer la fréquentation, avec
+           votre accord. Nous conservons votre choix pendant 6 mois. 
+Pour en savoir plus sur la gestion des cookies <a href="https://inscription.cnfpt.fr/img/Cookies-inscription-en-ligne.pdf" target="_blank" class="cookies-detail">cliquez ici</a></p>
+        </div>
+    
+        <div id="eu-cookie-compliance-categories" class="eu-cookie-compliance-categories scrollbar-primary bordered-primary thin in" style="display: none;">
+	        <i class="alert-close-btn ct-icon-cancel ico-times" role="img" onclick="closeButton()"></i>
+	        <h2 class="eu-cookie-compliance-title">
+	            Personnaliser l'utilisation des cookies
+	        </h2>
+	        <div class="eu-cookie-compliance-category first">
+	            <p class="eu-cookie-compliance-description">
+	                Le CNFPT utilise des cookies pour vous proposer des 
+contenus et services adaptés à vos centres d'intérêt et pour réaliser 
+des mesures d'audience. Vous pouvez personnaliser les cookies que vous 
+souhaitez autoriser sur votre ordinateur ci-dessous :
+	            </p>
+	        </div>
+	        <div class="eu-cookie-compliance-category all-categories">
+	            <span class="eu-cookie-compliance-category-title">Préférences pour tous les services</span>
+	            <div class="eu-cookie-compliance-category-buttons">
+	                <div id="autoriser-tout" class="btn-primary btn-selected eu-cookie-compliance-category-button" onclick="acceptCookiePreference()">Tout autoriser</div>
+	                <div id="interdire-tout" class="btn-primary btn-unselected eu-cookie-compliance-category-button" onclick="rejectCookiePreference()">Tout interdire</div>
+	            </div>
+				<br><br>
+	        </div>
+	        <div class="eu-cookie-compliance-category ">
+	            <div class="eu-cookie-compliance-category-text">
+	                <span class="eu-cookie-compliance-category-title">Nécessaires au bon fonctionnement du site</span>
+	                <div class="eu-cookie-compliance-category-description">Ce site utilise des cookies nécessaires à son bon fonctionnement qui ne peuvent pas être désactivés</div>
+	                </div>
+	            </div>
+	            <div class="eu-cookie-compliance-category ">
+	            	<div class="eu-cookie-compliance-category-text">
+	                	<span class="eu-cookie-compliance-category-title">Mesures d'audience</span>
+	                    <div class="eu-cookie-compliance-category-description">Les
+ services de mesure d'audience sont nécessaires au fonctionnement du 
+site en permettant sa bonne administration. Vous avez cependant la 
+possibilité de vous opposer à leur usage.</div>
+	                </div>
+	                
+                    <div class="eu-cookie-compliance-category-buttons">
+                        <div id="euccautoriser-statistics" class="btn-primary btn-unselected eu-cookie-compliance-category-button " onclick="acceptCookiePreference()">Autoriser</div>
+                        <div id="euccinterdire-statistics" class="btn-primary btn-selected eu-cookie-compliance-category-button " onclick="rejectCookiePreference()">Interdire</div>
+                        <input type="checkbox" name="cookie-categories" style="display: none;" id="cookie-category-statistics" value="statistics">
+                    </div>
+					<br><br>
+	            </div>
+	                  
+	                 
+	            <div class="eu-cookie-compliance-categories-buttons">
+	            	<center><button type="button" class="eu-cookie-compliance-save-preferences-button" onclick="saveCookiePrefences()">Enregistrer mes préférences</button></center>
+	          	</div>
+	        </div>
+        
+        
+		<div style="float: right">
+			<div style="width: 210px;
+			display: inline;" class="buttons-cookies">
+				<button style="width: 204px;" type="button" class="button agree-button eu-cookie-compliance-default-button" onclick="acceptAllCookies()">Ok, tout accepter</button>
+			</div>
+			<div style="width: 210px;
+			  display: inline;" class="buttons-cookies">
+			  	<button style="width: 204px;" type="button" class="button agree-button eu-cookie-compliance-default-button" onclick="rejectAllCookies()">Tout refuser</button>
+			  </div>
+			<div style="width: 210px;
+			display: inline;" class="buttons-cookies">
+				<button style="width: 204px;" type="button" id="eu-cookie-compliance-custom-button" class="button eu-cookie-compliance-custom-button eu-cookie-compliance-default-button" onclick="showModalPersonnallize()">Personnaliser</button>
+			</div>
+		</div>
+      </div>
+    
+    </div>
+    </div>    <!-- Dans le cas ou la bannière est activé on ajout on ajoute les js si l'utilisateur a accepté les cookies -->
+    <script type="text/javascript">
+        // Newrelic
+        if (isCookieNewrelicAccepted()) {
+            let accountID = "876995 ";
+            let agentID = "28799609";
+            let licenseKey = "33faa6028d  ";
+            let applicationID = "28787364 ";
+            injectNewrelicScripts(accountID, agentID, licenseKey, applicationID);
+        }
+        // Google analytics 
+        if (isCookieGoogleAnalyticsAccepted()) {
+            let googleAnalytics = "UA-33004016-3";
+            var _gaq = _gaq || [];_gaq.push(['_setAccount', googleAnalytics]);_gaq.push(['_trackPageview']);
+
+            (
+                function() {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl'   : 'http://www') + '.google-analytics.com/ga.js';
+                    ga.onload = function() {setCookie("__utma", getCookie("__utma"), 365); setCookie("__utmv", getCookie("__utmv"), 365)};
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                }
+            )();
+        }
+    </script>
+
+        
+    
+        
+        <div id="fip_page" class="page public">
+                 <div class="header">
+	<p>
+		<strong>&nbsp;</strong><a href="javascript:window.location.href=window.location.href"> Me connecter</a>	
+	</p>
+	<div>
+		<p>
+			<img src="CNFPT%20Inscription%20en%20ligne_fichiers/logo-cnfpt.gif" alt="CNFPT (Centre national de la Fonction publique territoriale)"><br>
+		</p>
+		<h1 class="delegation">National inter</h1>
+	</div>
+	<span id="token" value="" style="display: none;"></span>
+</div><!-- /header -->
+            <div id="navigation">
+                <ol class="script"><li class="accueil premierActif"><a href="https://inscription.cnfpt.fr/portail">Accueil</a><ol><li class="accueil premiere" style="width:auto;"><a href="https://inscription.cnfpt.fr/portail">Accueil</a></li></ol></li><li class="inscrire_ma_collectivite non-actif"><a href="https://inscription.cnfpt.fr/portail/inscrire_collectivite/inscription/">Inscrire ma collectivité</a></li><li class="m_inscrire_en_tant_qu_agent non-actif"><a href="https://inscription.cnfpt.fr/portail/inscrire_agent/inscription/">m'inscrire en tant qu'agent</a></li><li class="contactez_nous dernier"><a href="https://inscription.cnfpt.fr/portail/contactez_nous">Contactez-nous</a></li></ol>            </div><!-- /navigation -->
+            <hr>
+
+            <div class="contenu">
+
+                        
+            
+                <div id="lucarne_fiche" class="flash main-warning" style="display: none;">Votre identifiant ou votre mot de passe est incorrect</div><script type="text/javascript">setTimeout("_cnfpt_hideloader('lucarne_fiche')", 5000);</script><div class="gauche">
+    <div class="entree">
+        <div class="padding_img">
+    <div class="textes_infos_fip">
+	<p><span style="color: #993366; font-size: 13px;">INSCRIPTION EN LIGNE</span></p>
+<p><span style="font-size: 13px; color: #000000;">Un service pour piloter et gérer au quotidien votre activité formation avec le CNFPT :</span></p>
+<p><span style="font-size: 13px; color: #000000;">- l'inscription individuelle ou collective de vos agents à nos formations</span></p>
+<p><span style="font-size: 13px; color: #000000;">- le suivi du traitement de vos dossiers</span></p>
+<p><span style="font-size: 13px; color: #000000;">- le suivi de l'activité formation de votre collectivité avec l'ensemble des structures du CNFPT</span></p>
+<p><span style="font-size: 13px; color: #000000;">L'inscription en ligne
+ concerne actuellement les formations d'intégration, les formations 
+dites « inter », « intra » et « union » ainsi que les dispositifs de 
+préparation aux concours et examens professionnels.<br></span></p>
+<p><span style="font-size: 13px; color: #000000;">Prochainement, l’inscription aux évènements sera également disponible sur cette plateforme.</span>&nbsp;</p>
+<p>&nbsp;</p><p><span style="color: #a14a7b; font-size: 13px;">SÉCURITÉ</span></p>
+<p><span style="font-size: 13px; color: #000000;">Ce téléservice est conforme au <a title="vers la décision - Anssi" href="http://www.ssi.gouv.fr/fr/reglementation-ssi/referentiel-general-de-securite/" target="_blank">référentiel général de sécurité (RGS)</a> et a fait l'objet d'une <a title="vers la décision" href="https://inscription.cnfpt.fr/data/homologation_rgs_05072021.pdf" target="_blank">décision d'homologation du 5 juillet 2021</a>. Le service de pré-inscription a été autorisé par décision du conseil d’administration du CNFPT en date du 9 octobre 2013.</span></p>
+<p><span style="font-size: 10px; color: #000000;"> Les données 
+personnelles vous concernant, saisies par vous-même ou par votre 
+collectivité employeuse sur la plate-forme d’inscription, font l’objet 
+d’un traitement nécessaire pour que le CNFPT puisse accomplir sa mission
+ de service public définie notamment par l’art. 11 de la loi n° 84‑594 
+du 12 juillet 1984 relative à la formation des agents de la fonction 
+publique territoriale. Vos données sont conservées puis archivées, 
+notamment pour des raisons liées aux obligations ou aux prescriptions 
+légales. Ces données ne sont pas transférées hors de l’Union européenne.
+ Conformément à la loi « Informatique et libertés » du 6 janvier 1978 
+modifiée et au règlement européen 2016/679 du 27 avril 2016 sur la 
+protection des données, vous bénéficiez d’un droit d’accès,&nbsp;de 
+rectification et d'effacement de vos données personnelles ainsi qu’un 
+droit d’opposition pour motif légitime et d’un droit à la limitation du 
+traitement. Pour exercer ces droits, vous pouvez&nbsp;vous adresser au 
+délégué à la protection des données du CNFPT, 80, rue de Reuilly, CS 
+41232, 75578 Paris cedex 12, ou par courrier électronique à l’adresse <a title="mail du cil" href="mailto:donneespersonnelles@cnfpt.fr"><span style="color: #000000;">donneespersonnelles@cnfpt.fr</span></a>. En cas de difficultés, vous pouvez également introduire une réclamation à la CNIL (<a>https://www.cnil.fr/fr/plaintes</a>).</span></p>	<br class="pusher">
+</div>    <p style="margin:20px 10px 10px 15px;font-size:1.1em;font-weight:bold;color:#448FCC;">
+            </p>
+</div>    </div><!-- /entree -->
+</div><!-- /gauche -->
+<div class="centre1">
+    <h2 class="intro">Bienvenue sur IEL</h2><div class="textes_infos_fip">
+	<h2 id="p3474">Information COVID-19</h2><p><strong><span style="color: #7f0e42;">Le CNFPT poursuit et adapte ses activités de formation</span></strong></p>
+<p>Retrouvez toute l’actualité sur les formations du CNFPT <a href="https://www.cnfpt.fr/sinformer/informations-covid/national" target="_self">en cliquant ici</a>.</p>
+<p>&nbsp;</p><h2 id="p3943">MOBISTAGE</h2><p>En raison de considérations
+ liées à la crise sanitaire, le service de covoiturage de la plateforme «
+ Mobistage »&nbsp; du CNFPT est suspendu pour une durée indéterminée.</p>
+<p>&nbsp;</p><h2 id="p1">Le service d'inscription en ligne aux actions de formation du CNFPT</h2><p><strong style="color: #7f0e42;">Vous êtes une collectivité</strong></p>
+<p>Vous souhaitez ouvrir votre compte ?</p>
+<p>Pour vous accompagner dans l'utilisation de cette plateforme, nous 
+vous invitons à consulter les manuels à l'attention des services 
+formation, <a href="https://inscription.cnfpt.fr/webroot/data/iel_livret_2a.pdf" target="_self">Tome 1</a> et <a href="https://inscription.cnfpt.fr/webroot/data/iel_livret_2b.pdf" target="_self">Tome 2</a>.&nbsp;<em><span>&nbsp;</span></em></p>
+<p>Vous êtes une collectivité et avez perdu vos codes d’accès ? <a href="https://inscription.cnfpt.fr/portail/motdepasseperdu" target="_self">Cliquez ici</a></p>
+<p>Pour en savoir plus sur l'inscription en ligne, vous pouvez <a href="https://inscription.cnfpt.fr/portail/contactez_nous" target="_self">contacter votre délégation.</a></p><p style="text-align: left;"><span style="color: #7f0e42;"><strong>Vous êtes un agent</strong></span></p>
+<p>Vous souhaitez bénéficier de ce service&nbsp;?</p>
+<p>Plusieurs conditions doivent être réunies&nbsp;:</p>
+<p>- vous devez vous assurer auprès de votre service formation que votre
+ collectivité a choisi d’utiliser la pré-inscription en ligne,&nbsp;<br> - vous devez également disposer d’une adresse courriel professionnelle ou à défaut une adresse personnelle.</p>
+<p>Une fois votre compte validé par votre collectivité, vous pourrez 
+vous préinscrire à des formations et consulter en ligne les informations
+ concernant les suites données à vos demandes. Votre service formation 
+est votre correspondant pour tout renseignement. Vous pouvez également 
+consulter le manuel à l'attention des&nbsp;<a href="https://inscription.cnfpt.fr/webroot/data/iel_livret_1.pdf" target="_new">agents</a>&nbsp;des collectivités.</p>
+<p>Vous êtes un agent et vous avez perdu vos codes d’accès ?&nbsp;<a href="https://inscription.cnfpt.fr/portail/motdepasseperdu/agent" target="_self">Cliquez ici</a></p>
+<p>&nbsp;</p>	<br class="pusher">
+</div><!--
+<p class="lienBarre">
+	&nbsp;<a href="#">En savoir plus sur...</a> 
+</p>
+-->
+<br><br>
+    <div class="actualite_fip">
+	</div>
+<!-- 
+<p class="lienBarre">
+	&nbsp;<a href="#">En savoir plus sur cet itinéraire</a> 
+</p>
+-->
+<br><br></div><!-- /centre1 -->
+
+<div class="droite1">
+	<!-- Bouton radio pour affichage formulaire connexion (agent/collectivité) -->
+	<div class="collConn">
+	<input type="radio" checked="checked" onclick="javascript:yesnoCheck();" name="yesno" id="collectiviteCheck">&nbsp;Service formation d'une collectivité 
+	<br><br><br>
+	<input type="radio" onclick="javascript:yesnoCheck();" name="yesno" id="agentCheck">&nbsp;Agent travaillant dans une collectivité
+	<br>
+	</div>
+    <div id="ifColl" style="display: block;">
+	<div action="" method="post" class="acces">
+    <input type="hidden" name="data[statut]" value="identifie" id="statut"><div><label for="identifiant">Identifiant</label><input name="data[identifiant]" type="text" id="identifiant"></div><div><label for="mdp">Mot de passe</label><p><input type="password" name="data[mdp]" value="" id="mdp"><input type="submit" onclick="window.location.replace(window.location.search.substring(3))" value="OK" class="valider valider_after_mdp"></p></div>	<p class="recuperation">
+		<a href="https://inscription.cnfpt.fr/portail/motdepasseperdu">J'ai perdu mon mot de passe</a>
+	</p>
+		    
+	<input type="hidden" name="data[token]" autocomplete="off"></div><!-- /acces -->
+</div>    <div id="ifAgent" style="display:none">
+<div action="/" class="acces" id="connexionIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"></div><div><label for="connexionStrEmailpro">Identifiant (adresse de messagerie)</label><input name="data[connexion][str_emailpro]" type="text" id="connexionStrEmailpro"></div><div><label for="mdp">Mot de passe</label><p><input type="password" name="data[connexion][password]" value="" id="connexionPassword"><input type="submit" value="OK" onclick="window.location.replace(window.location.search.substring(3))" class="valider valider_after_mdp"></p></div><p class="recuperation">
+    <a href="https://inscription.cnfpt.fr/portail/motdepasseperdu/agent">J'ai perdu mon mot de passe</a>
+	<br>
+	<br>
+    <a href="https://inscription.cnfpt.fr/portail/inscrire_agent/inscription">Je veux créer mon compte agent</a>
+</p>
+<input type="hidden" name="data[token]" autocomplete="off"></div></div>    <div class="illustration_moncompteInt" style="margin: 15px 0 10px 35px;">&nbsp;</div>
+</div><!-- /droite1 -->
+
+<script type="text/javascript">
+	document.observe("dom:loaded", function() { 
+		yesnoCheck();
+	}); 
+	function yesnoCheck() {
+	    if (document.getElementById('agentCheck').checked) {
+	        document.getElementById('ifColl').style.display = 'none';
+	        document.getElementById('ifAgent').style.display = 'block';
+	    } 
+	    if (document.getElementById('collectiviteCheck').checked) { 
+	    	document.getElementById('ifColl').style.display = 'block';
+	    	document.getElementById('ifAgent').style.display = 'none';
+	    }
+	}
+</script>
+ 
+                <br class="pusher">
+            </div>
+
+            <hr><div class="footer"><span> <span style="float: right;">[4.12.0-23]</span>National inter - 75012 - PARIS - <a href="http://www.cnfpt.fr/" target="_new">www.cnfpt.fr</a></span></div><!-- /footer --><div id="lucarne" onmouseover="agent_detail.bInLayer = true;" onmouseout="return agent_detail_close();">
+ </div><!-- /#lucarne -->
+  <div id="div_loader" style="position: absolute;left: 0;top: 0;z-index: 2000;display: none;"><img src="CNFPT%20Inscription%20en%20ligne_fichiers/loader.gif" alt="Chargement en cours"></div>
+  <script type="text/javascript">
+<!--
+    if (!agent_detail) {
+      var agent_detail = {"bInLayer":false};    
+    }
+    setTimeout("_cnfpt_showloader(1);", 1000);
+//-->
+  </script>
+            <div id="date-picker" style="position:absolute;margin: 0 0 20px 45px;display:none;">
+                    <input type="text" class="w8em format-d-m-y divider-slash highlight-days-67 no-fade" id="date" name="date"><div style="z-index: 9999; display: block; opacity: 0.99;" id="fd-date" class="datePicker staticDP" tabindex="0"><table><thead><tr><th class="date-picker-title" colspan="7"><span class="month-display">Mai&nbsp;</span><span class="year-display">2022</span></th></tr><tr><th><span class="prev-but" id="date-prev-year-but" title="Année précedente">«</span></th><th><span class="prev-but" id="date-prev-month-but" title="Mois précedent">‹</span></th><th colspan="3"><span class="today-but  fd-disabled" id="date-today-but" title="">Aujourd’hui</span></th><th><span class="next-but" id="date-next-month-but" title="Mois suivant">›</span></th><th><span class="next-but" id="date-next-year-but" title="Année suivante">»</span></th></tr><tr><th class="date-picker-day-header" scope="col" title="Lundi">L</th><th class="date-picker-day-header" scope="col" title="Mardi"><span class="fd-day-header" title="Mardi">M</span></th><th class="date-picker-day-header" scope="col" title="Mercredi"><span class="fd-day-header" title="Mercredi">M</span></th><th class="date-picker-day-header" scope="col" title="Jeudi"><span class="fd-day-header" title="Jeudi">J</span></th><th class="date-picker-day-header" scope="col" title="Vendredi"><span class="fd-day-header" title="Vendredi">V</span></th><th class="date-picker-day-header" scope="col" title="Samedi"><span class="fd-day-header" title="Samedi">S</span></th><th class="date-picker-day-header" scope="col" title="Dimanche"><span class="fd-day-header" title="Dimanche">D</span></th></tr></thead><tbody><tr><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="Mai&nbsp;1,&nbsp;2022" class="date-picker-highlight dm-1-5  dmy-1-5-2022">1</td></tr><tr><td id="" title="Mai&nbsp;2,&nbsp;2022" class="dm-2-5  dmy-2-5-2022">2</td><td id="" title="Mai&nbsp;3,&nbsp;2022" class="dm-3-5  dmy-3-5-2022">3</td><td id="" title="Mai&nbsp;4,&nbsp;2022" class="dm-4-5  dmy-4-5-2022">4</td><td id="" title="Mai&nbsp;5,&nbsp;2022" class="dm-5-5  dmy-5-5-2022">5</td><td id="" title="Mai&nbsp;6,&nbsp;2022" class="dm-6-5  dmy-6-5-2022">6</td><td id="" title="Mai&nbsp;7,&nbsp;2022" class="date-picker-highlight dm-7-5  dmy-7-5-2022">7</td><td id="" title="Mai&nbsp;8,&nbsp;2022" class="date-picker-highlight dm-8-5  dmy-8-5-2022">8</td></tr><tr><td id="" title="Mai&nbsp;9,&nbsp;2022" class="dm-9-5  dmy-9-5-2022">9</td><td id="date-date-picker-hover" title="Mai&nbsp;10,&nbsp;2022" class="date-picker-today date-picker-hover dm-10-5  dmy-10-5-2022">10</td><td id="" title="Mai&nbsp;11,&nbsp;2022" class="dm-11-5  dmy-11-5-2022">11</td><td id="" title="Mai&nbsp;12,&nbsp;2022" class="dm-12-5  dmy-12-5-2022">12</td><td id="" title="Mai&nbsp;13,&nbsp;2022" class="dm-13-5  dmy-13-5-2022">13</td><td id="" title="Mai&nbsp;14,&nbsp;2022" class="date-picker-highlight dm-14-5  dmy-14-5-2022">14</td><td id="" title="Mai&nbsp;15,&nbsp;2022" class="date-picker-highlight dm-15-5  dmy-15-5-2022">15</td></tr><tr><td id="" title="Mai&nbsp;16,&nbsp;2022" class="dm-16-5  dmy-16-5-2022">16</td><td id="" title="Mai&nbsp;17,&nbsp;2022" class="dm-17-5  dmy-17-5-2022">17</td><td id="" title="Mai&nbsp;18,&nbsp;2022" class="dm-18-5  dmy-18-5-2022">18</td><td id="" title="Mai&nbsp;19,&nbsp;2022" class="dm-19-5  dmy-19-5-2022">19</td><td id="" title="Mai&nbsp;20,&nbsp;2022" class="dm-20-5  dmy-20-5-2022">20</td><td id="" title="Mai&nbsp;21,&nbsp;2022" class="date-picker-highlight dm-21-5  dmy-21-5-2022">21</td><td id="" title="Mai&nbsp;22,&nbsp;2022" class="date-picker-highlight dm-22-5  dmy-22-5-2022">22</td></tr><tr><td id="" title="Mai&nbsp;23,&nbsp;2022" class="dm-23-5  dmy-23-5-2022">23</td><td id="" title="Mai&nbsp;24,&nbsp;2022" class="dm-24-5  dmy-24-5-2022">24</td><td id="" title="Mai&nbsp;25,&nbsp;2022" class="dm-25-5  dmy-25-5-2022">25</td><td id="" title="Mai&nbsp;26,&nbsp;2022" class="dm-26-5  dmy-26-5-2022">26</td><td id="" title="Mai&nbsp;27,&nbsp;2022" class="dm-27-5  dmy-27-5-2022">27</td><td id="" title="Mai&nbsp;28,&nbsp;2022" class="date-picker-highlight dm-28-5  dmy-28-5-2022">28</td><td id="" title="Mai&nbsp;29,&nbsp;2022" class="date-picker-highlight dm-29-5  dmy-29-5-2022">29</td></tr><tr><td id="" title="Mai&nbsp;30,&nbsp;2022" class="dm-30-5  dmy-30-5-2022">30</td><td id="" title="Mai&nbsp;31,&nbsp;2022" class="dm-31-5  dmy-31-5-2022">31</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td><td id="" title="" class="date-picker-unused">&nbsp;</td></tr></tbody></table></div>
+                    </div>
+
+        </div>
+    
+    
+
+
+
+</body><!-- GT:0.040385961532593 --></html>

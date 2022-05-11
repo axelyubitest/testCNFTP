@@ -1,0 +1,1668 @@
+/* Gaetan Langhade - V-Technologies - 2008 */
+
+/* **** LES CONTENANTS ARTICULES */
+
+/* les listes : menus */
+#navigation ol	{
+	min-height: 23px;
+}
+#navigation li	{
+	float: left;
+	position: relative;
+}
+#navigation li.actif a,
+#navigation li.premierActif a,
+#navigation li.dernierActif a {
+	background: #7f0e42;
+	color: #fff;
+}
+
+
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+	outline: none;
+	border: 1px solid #7F0E42 !important;
+}
+
+
+
+/* les listes : sous-menus */
+#navigation ol ol	{
+	float: none;
+	padding: 0;
+	border: 1px solid #ddd;
+	background: #f9f9f9;
+}
+#navigation ol ol li.webservices {
+	display: none;
+}
+
+body.gestionnaire #navigation ol ol li.webservices,
+body.pas_de_gestionnaire #navigation ol ol li.webservices,
+body.admin #navigation ol ol li.webservices {
+	display: block;
+}
+
+#navigation ol li.constituer_les_groupes,
+#navigation ol li.parametrer_les_sessions {
+	width: 87px;
+}
+
+#navigation ol li.police_municipale {
+	width: 73px;
+}
+
+#navigation ol li.mon_compte{
+	width: 53px;
+}
+
+
+#navigation ol li.traiter_les_sessions,
+#navigation ol li.saisir_les_presences {
+	width: 80px;
+}
+#navigation li.questions_reponses {
+  width: 75px;
+}
+#navigation li.prepa_tremplin {
+  width: 60px;
+}
+#navigation ol li.constituer_les_groupes a,
+#navigation ol li.saisir_les_presences a,
+#navigation ol li.traiter_les_sessions a,
+#navigation ol li.parametrer_les_sessions a,
+#navigation ol li.prepa_tremplin a,
+#navigation ol li.police_municipale a,
+#navigation ol li.mon_compte a,
+#navigation ol li.questions_reponses a {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#navigation ol ol li	{
+	float: none;
+	border-width: 0 0 1px 0;
+	white-space: nowrap;	
+	border-top: 0;
+	background: transparent;
+	padding: 0;
+}
+#navigation ol ol li.derniere	{
+	border-bottom: 0;
+}
+#navigation ol ol a:link,
+#navigation ol ol a:visited {
+	color: #7F0E42;
+	text-transform: none; 
+	padding: 0.3em 0.5em;
+	font-size: 1.5em;
+}
+
+
+/* les listes : menus avec JavaScript */
+#navigation .script ol	{
+	position: absolute;
+	left: -4444px;
+	z-index: 10;
+}
+
+#navigation .script .survol ol	{
+	left: 0px;
+}
+
+#navigation ol ol li.premiere	{
+	color: #7F0E42;
+}
+
+/* les listes : contenu */
+.entree ul	{
+	margin-left: 0px;
+}
+.entree li,
+.correspondants li/*,
+#lucarne .panneau li*/	{
+	margin-top: 17px;
+	background: url(/cnfpt/css/images/puce-cercle.gif) top left no-repeat;
+	padding-left: 15px;
+}
+#lucarne .panneau li	{
+	margin-top: 7px;
+}
+#lucarne li .panneau li	{
+	margin: 3px 0;
+}
+.entree ul.decoration	{
+	padding: 0 16px 75px 0;
+	margin-top: -7px;
+}
+.entree ul.decoration li	{
+	margin-left: 17px;
+	background-image: url(/cnfpt/css/images/puce-cercle-gris.gif);
+}
+.entree div.decoration p	{
+	margin-left: 17px;
+	background: url(/cnfpt/css/images/puce-cercle-gris.gif) no-repeat;
+	padding-left: 15px;
+	font-size: 1.2em;
+}
+.entree ul.decoration li.actif	{
+	background-image: url(/cnfpt/css/images/puce-cercle.gif);
+}
+
+/* les onglets (dont titres specifiques, liens specifiques... )*/
+#onglets {
+	position: relative;
+	clear: both; /* #19011 casse peut être ailleurs */
+	padding-top: 20px; /* #19011 casse peut être ailleurs */
+}
+.centre2 #onglets	{
+	margin: 20px 0 0 37px;
+	/*min-height: 65em;*/
+}
+.centre4 #onglets	ul,
+.centre4 #onglets	ol {
+	/*min-height: 165em;*/
+	overflow: visible;
+	zoom: 1;
+}
+
+/* Pour les navigateurs récents */
+.centre4 #onglets	ul:before,
+.centre4 #onglets	ol:before,
+.centre4 #onglets	ul:after,
+.centre4 #onglets	ol:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+
+.centre4 #onglets	ul:after,
+.centre4 #onglets	ol:after {
+	clear: both;
+}
+
+.centre4 #onglets	ul,
+.centre4 #onglets	ol {
+	margin-bottom: 20px;
+	zoom: 1; /* Pour IE 6/7 (trigger hasLayout) */
+}
+
+.centre4 .listeRallonge	{
+	/*min-height: 74em !important;*/
+}
+
+#onglets li	{
+	float: left;
+	display: block;
+	zoom: 1;
+}
+
+#onglets ul.erreurs_import, 
+#onglets ul.view_log,
+.contenu_overlay ul.view_log {
+	padding: 5px 5px 5px 20px;
+}
+#onglets ul.erreurs_import li, 
+#onglets ul.view_log li,
+.contenu_overlay ul.view_log li {
+	display: list-item;
+	list-style-type: disc;
+	margin: 0 0 0 20px;
+	float: none;
+}
+
+
+#onglets .ordonnees {
+	margin: 15px 0 0 90px;
+}
+#onglets .ordonnees li {
+	display: block;
+	float: none;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+li.domaine {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #002570;
+}
+
+li.domaine.active {
+	color: #A7601E;
+}
+
+li.domaine li.famille {
+	font-size: .8em;
+}
+
+.droite4 li.domaine {
+	font-size: .9em;
+}
+
+* html .droite4 li.domaine {
+	margin-left: -15px;
+}
+* html .droite4 li.domaine li {
+	margin-left: 35px;
+}
+
+.droite4 li.famille {
+	list-style-type: square;
+	font-weight: normal;
+	margin: 0 0 5px 10px;
+}
+
+.droite4 li.famille a {
+	text-decoration: none;
+}
+
+.droite4 li.famille.actif {
+	font-weight: bold;
+}
+
+#menu_onglets_webservice {
+	font-weight: bold;
+	font-size: 1.17em;
+}
+#menu_onglets_webservice li a,
+#onglets h3 span,
+#onglets h3 a,
+#onglets .actif h3,
+#onglets .simulActif h3 {
+	padding: 3px 14px 3px 10px;
+	background: #fff;
+	color: #7f0e42;
+	position: relative;
+	z-index: 2;
+	text-transform: uppercase; 
+}
+#onglets .actif h3 span,
+#onglets .actif h3 a,
+#onglets .actif h3 a {
+	background: none;
+	color: #fff; 
+	padding: 0;
+}
+
+/*#onglets h3 span:hover,*/
+#menu_onglets_webservice li a:hover,
+#onglets h3 a:hover {
+	background: #7f0e42;
+	color: #fff;
+}
+
+.centre4 #onglets h3 span,
+#onglets h3 a	{
+	display: block;
+	/*margin: -3px -14px -3px -11px;
+	padding: 3px 14px 3px 11px;
+	background: #D9D9D9 url(/cnfpt/css/images/fond-onglet.gif) top right no-repeat;*/
+}
+.centre4 #onglets h3 a {
+	/*margin: -3px -12px -3px -8px;
+	padding: 3px 12px 3px 8px;*/
+}
+#onglets h3.ulterieur	{}
+
+#menu_onglets_webservice li.active a,
+#onglets .actif h3 {
+	background: #7f0e42;
+	color: #fff;
+}
+
+
+.lignes h3,
+.lignes h3 a	{
+	min-height: 32px;
+}
+.centre4 h2.empart	{
+	float: left;
+	padding-left: 14px;
+	width: 280px;
+}
+.centre4 h2.empart.long	{
+	width: 400px;/*320px*/
+}
+.centre4 h2.nofloat	{
+	float: none;
+}
+.centre4 h2.deuxlignes	{
+	padding-top: 20px;
+}
+h4.legendaire,
+p.legendaire	{
+	color: #B05D10;
+	font-size: 1.3em;
+	background: url(/cnfpt/css/images/fond-point.gif) left center repeat-x;
+	padding-left: 72px;
+	width: 635px;
+}
+h4.legendaire span {
+	font-weight: bold;
+	background: #F7FAFD url(/cnfpt/css/images/puce-cercle.gif) 4px center no-repeat;
+	padding: 0 4px 0 18px;
+}
+p.legendaire span {
+	font-weight: bold;
+	background: #F7FAFD url(/cnfpt/css/images/puce-cercle.gif) 4px center no-repeat;
+	padding: 0 4px 0 18px;
+}
+.double h4,
+#lucarne .panneaux h4	{
+	font-size: 1.2em;
+	color: #7F0E42;
+	margin: 0 0 1em 0;
+}
+#lucarne .panneaux h4	{
+	margin: 0px 0 0 0;
+}
+.double .liste h4	{}
+h5.legendaire	{
+	color: #B05D10; /*#002570*/
+	font-size: 1.3em;
+	margin: 26px 0 0 27px;
+	background: url(/cnfpt/css/images/fond-point.gif) left center repeat-x;
+	width: 679px;
+}
+h5.legendaire span	{
+	font-weight: bold;
+	background: #F7FAFD;
+	padding-right: 4px;
+}
+h6.legendaire	{
+	float: right;
+	font-size: 1.2em;
+	color: #002570;
+	width: 680px;
+}
+/*.onglet	{*/
+/*position: absolute;
+	z-index: 1;
+	margin-top: -1px;
+	left: 0;
+	display: none;*/
+/*}*/
+.actif .onglet	{
+	display: block;
+}
+.centre2 .onglet	{
+	/*width: 48.6em;
+	background: #F7FAFD url(/cnfpt/css/images/fond-bloc-f.gif) bottom left no-repeat;*/
+	padding: 22px 0;
+	border-top: 1px solid #D9D9D9;
+	/*clear: left;*/
+}
+.centre4 .onglet	{
+	clear: left;
+	/*background: #f6f6f6;*/
+}
+
+.large .onglet	{
+	width: auto;
+	max-width: none;
+}
+.longlet, #referentiel	{
+	margin-bottom: 12px;
+	zoom: 1;
+}
+.large .longlet,
+.large #referentiel	{
+	margin: 0 0 1.2em 0;
+	overflow: visible;
+}
+.onglet > form.longlet, .onglet > .longlet.double  {
+	background: #F6F6F6;
+	padding: 1.5em 1.5em;
+}
+
+form.dernier:before,
+.centre4 div.longlet:before,
+form.dernier:after,
+.centre4 div.longlet:after {
+	content: "";
+	display: block;
+	overflow: hidden;
+}
+
+form.dernier:after,
+.centre4 div.longlet:after {
+	clear: both;
+}
+
+form.dernier,
+.centre4 div.longlet	{
+	zoom: 1;
+}
+
+#onglets div.longlet .demarquer	{
+	margin-top: 44px;
+}
+
+#onglets div.longlet #territoire_content .demarquer	{
+	margin-top: 0 !important;
+	position: static !important;
+}
+
+.epique	{
+	margin-top: 12px;
+	overflow: hidden;
+}
+.epique img	{
+	margin: 3px 0 0 1px;
+}
+.double	{
+	overflow: hidden;
+	position: relative;
+	margin-bottom: -24px;
+	max-width: 950px;
+}
+.filtre	{
+	float: left;
+	width: 36.4em; /* 40.4em */
+	margin-bottom: 1em;
+}
+.carte	{
+	width: 359px; /* 390px */
+	margin: 12px 0;
+	overflow: hidden;
+	position: relative;
+}
+.carte img	{
+	float: right;
+	left: 0 !important;
+}
+
+.carte #ter_cartozon,
+.carte #ter_cartomap {
+	margin-left: 15px;
+}
+
+.dates p	{
+	padding: 5px 0 14px;
+	overflow: hidden;
+}
+.double .demarquer	{
+	position: absolute; 
+	bottom: 26px;
+	left: 0;
+	width: 384px;
+}
+.liste	{
+	float: right;
+	width: 30em; /* 29em */
+	position: relative;
+}
+
+.liste select {
+	width: 240px;
+}
+
+.liste .affichage	{
+	padding: 24px 0 0 0;
+}
+
+
+/* les onglets en popup interne */
+#lucarne .panneaux	{
+	overflow: hidden;
+	margin-left: 20px;
+	height: 150px;
+	overflow: auto;
+}
+#lucarne .panneaux li	{
+	float: left;
+	margin-right: 4px;
+}
+.panneaux h3 {
+	padding: 1px 8px 2px 5px;
+	border-left: 1px solid #B2B2B2;
+	background: #F7FAFD url(/cnfpt/css/images/fond-onglet-actif-pop.gif) top right no-repeat;
+	position: relative;
+	z-index: 2;
+}
+#lucarne .panneaux h3 a	{
+	display: block;
+	margin: -1px -8px -2px -6px;
+	padding: 1px 8px 2px 6px;
+	background: #D9D9D9;
+}
+#lucarne .panneau	{
+	display: none;
+	position: absolute;
+	z-index: 1;
+	margin-top: 16px !important;
+	margin-bottom: 0.5em;
+	left: 18px;
+	width: 176px;
+	padding: 15px;
+	height: 80px;
+}
+
+#lucarne .panneau {
+	overflow: auto;
+}
+
+#lucarne .actif .panneau,
+#lucarne .panneau li span	{
+	display: block;
+}
+#lucarne .panneau li	{
+	float: none;
+	margin-right: 0;
+}
+#lucarne .lucarne p.selectionnerSalle	{
+	text-align: left;
+	position: absolute;
+	bottom: 18px;
+	left: 50px;
+}
+#lucarne .lucarne p.selectionnerSalle a	{
+	width: auto
+}
+.retourPop,
+.suitePop	{
+	position: absolute;
+	bottom: -22px;
+}
+.suitePop	{
+	right: 20px;
+}
+
+
+
+
+
+/* les listes de definition */
+.calendrier	{
+	overflow: hidden;
+}
+.calendrier dt	{
+	/*background: url(/cnfpt/css/images/puce-disque.gif) top left no-repeat;*/
+	margin: 5px 5px 0 2px;
+	/*padding-left: 15px;*/
+	float: left;
+}
+.calendrier dd	{
+	margin-top: 5px;
+}
+.droite4 dl	{
+	padding: 0 29px;
+}
+.droite4 dt	{
+	margin-top: 12px;
+}
+
+
+/* les formulaires */
+.droite1 label	{
+	float: left;
+}
+#connexionStrEmailpro,
+#connexionPassword,
+#identifiant,
+#mdp	{
+	border: 1px solid #cccccc;
+	font-size: 1.2em;
+	padding: 0.2em 0.3em;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	width: 132px;	
+}
+
+.enregistrement fieldset,
+#onglets fieldset,
+.texte .contenu_texte	{
+	border: 0;
+	/*background: url(/cnfpt/css/images/fond-fieldset.gif) top left no-repeat;*/
+	padding: 0 0 30px 71px; /* a cause de la position du legend sur FF */
+}
+
+.centre2 #onglets fieldset	{
+	padding: 12px 0 40px 0;
+	width: 360px;
+}
+
+.centre4 #onglets fieldset	{
+	/*padding: 12px 0 0 0;*/ /* Jouve */
+	margin-top: 10px;
+	padding: 12px 0 30px 0;
+}
+
+.centre4 #onglets #form_recherche_territoire fieldset,
+.centre4 #onglets #form_recherche_lieuacc fieldset {
+	padding: 0 0 30px 71px;
+}
+
+.centre4 #onglets #liste_territoire_update fieldset	{
+	padding: 12px 0 0 0;
+}
+
+.centre4 #onglets fieldset + fieldset	{
+	margin: 2em 0 0 0;
+}
+
+.centre4 #onglets fieldset.tableau {
+	clear: both;
+}
+
+.centre4 #onglets fieldset.tableau table {
+	width: auto;
+}
+
+.centre4 #onglets .tableau_demande_dispense {
+	padding: 12px 0 20px 30px;
+	overflow: visible;
+	zoom: 1;
+}
+
+.large #onglets fieldset	{
+	/*background-image: url(/cnfpt/css/images/fond-fieldset-large.gif);*/
+	/*padding: 12px 0 20px 72px;*/
+	width: auto;
+}
+
+.large #onglets #form_recherche_agents fieldset,
+.large #onglets #form_recherche_questions fieldset,
+.large #onglets #form_recherche_faqs fieldset {
+	width: 98%; /* Jouve : auto */
+}
+
+.centre4 #onglets fieldset.agents	{
+	background: none;
+	font-size: 1.1em;
+}
+.enregistrement legend,
+#onglets legend	{
+	color: #8a3f69;
+	font-size: 1.4em;
+	font-weight: bold;
+	padding: 0 4px 0 0;
+	margin: 0 0 0 17px;
+}
+.texte .contenu_texte p{
+	color: #000;
+	font-size: 1.2em;
+	padding: 0 4px 0 18px;
+	margin: 0 0 10px 0;
+	position: relative;
+	top: -8px;
+	background: #F7FAFD ;
+}
+.texte .contenu_texte p strong{	
+	font-weight: bold;
+}
+#moncompte .contenu_texte p.premier strong{
+	color: #007DC4;
+}
+#moncompte  .contenu_texte p{
+	background: #F7FAFD url(/cnfpt/css/images/puce-petit-cercle.gif) 4px 5px no-repeat;
+}
+#moncompte  .contenu_texte p.premier{
+	background: #F7FAFD url(/cnfpt/css/images/puce-cercle-bleu.gif) 4px 2px no-repeat;
+}
+#moncompte  .contenu_texte p.dernier{
+	background: #F7FAFD url(/cnfpt/css/images/puce-cercle-bleufonce.gif) 4px 5px no-repeat;
+	color: #002570;
+}
+fieldset p.texte {
+	background: url(/cnfpt/css/images/puce-petit-cercle.gif) no-repeat scroll 4px 5px;
+	color: #000000;
+	font-size: 1.2em;
+	margin: 10px 0 10px 0;
+	padding: 0pt 4px 0pt 18px;
+}
+fieldset h4{
+	font-weight: bold;
+	font-size: 1.3em;
+	font-weight: bold;
+	padding: 0 0 0 18px;
+	position: relative;
+	top: -10px;
+	color: #022370;
+}
+fieldset .editor_div h4 {
+	top: 0;
+}
+#referentiel p.texte {
+	background: none;
+	color: #000000;
+	font-size: 1.1em;
+	margin: 10px 0 10px 0;
+	padding: 0pt 4px 0pt 50px;
+	color: #00246F;
+}
+ul.arboresence {
+	background: none;
+	color: #000000;
+	font-size: 1.1em;
+	margin: 10px 0 10px 0;
+	padding: 0pt 4px 20px 0px;
+	font-weight: bold;
+}
+.txt ul.arboresence{
+	margin: 30px 0 10px 5px;
+}
+ul.arboresence li {
+	display: block!important;
+	float: none!important;
+	margin: 5px 0 5px 0;
+	padding: 0 !important;
+	zoom: 1;
+}
+ul.arboresence img{
+	margin: 0 7px 0 0;
+}
+ul.arboresence ul{
+	margin: 0;
+	padding: 0pt 4px 0px 13px;
+}
+ul.arboresence ul li {
+	padding: 0 0 0 4px;
+}
+
+ul.arboresence .last-niv li a{
+	text-decoration: none;
+	background: url(/cnfpt/css/images/ico-liste-referentiel.png) no-repeat 0 55%;
+	padding: 0 0 0 10px;
+}
+ul.arboresence .last-niv li a:hover{
+	color: #007dc3;
+	/*background: url(/cnfpt/css/images/ico-liste-referentiel-active.png) no-repeat 0 55%;*/
+}
+#moncompte .contenu_texte p.dernier a, fieldset p.bleu, fieldset p.bleu a {
+	color: #002570;
+}
+fieldset p.marron {
+	color: #B05D10;
+}
+
+fieldset p.sans_fnd,
+.centre4 #onglets h3.sans_fnd {
+	background: none;
+}
+fieldset p.noimg{
+	background: none;
+}
+.enregistrement fieldset .conditions {
+	font-size: 1.1em;
+	margin: 10px 0 10px 0;
+	color: #002570;
+}
+.enregistrement fieldset .conditions input{
+	margin: 0 5px 0 0;
+	position: relative;
+	top: 2px;
+}
+.enregistrement h2{
+	margin: 0 0 10px 36px ;
+	color: #017DC3;
+	font-size: 1.5em;	
+}
+.enregistrement p.felicitations{
+	margin: 0 0 20px 36px ;
+	font-size: 1em;	
+}
+.enregistrement h2 span{
+	color: #AF5D11;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+.champ label,
+.pseudoLabel,
+#onglets .champ span.pseudoLabel,
+.serie label	{
+	float: left;
+	width: 14.5em;
+	margin-right: 10px;
+	text-align: right;
+}
+
+.champIntraUnion label{
+	float: left;
+	width: 30em;
+	margin-right: 10px;
+	text-align: right;
+}
+
+#coll_fiche .champ span.pseudoLabel {
+	clear: left;
+}
+
+span.pseudoLabel.session {
+	float: left;
+	text-align: right;
+	width: 140px !important;
+}
+.centre2 #onglets .champ label,
+.centre2 #onglets .champ .pseudoLabel,
+.court label	{
+	width: 10em;
+}
+
+.centre2 #onglets .champ.width_corr label	{
+	width: auto;
+}
+
+#onglets .etape_validation .champ label{
+	width: 17em;
+}
+.champ input,
+.champ select,
+.champ textarea,
+.serie input,
+.serie select,
+.editor_div {
+	border: 1px solid #dddddd;
+	/*width: 24.7em;*/
+	font-size:1.2em;
+}
+.champ input[readonly],
+.champ input[readonly]:focus {
+	background-color: rgb(235, 235, 228);
+	color: rgb(84, 84, 84);
+	border: 1px solid #bbb !important;
+	cursor: default;
+}
+.champ input#input_data_ws_compte_key {
+	width: 18.5em;
+}
+div.input_data_ws_compte_key a {
+	display: block;
+	text-align: right;
+	margin: 5px 0 0 0;
+	width: 42.2em;
+}
+
+.champ select#AgentGradeId {
+	width: 40.9em;
+}
+
+.champ_libelle {
+	width: 512px;
+}
+
+.date input{
+	border: 0;
+	width: auto;
+	font-size:1em;
+	float: left;
+}
+.date label{
+	width: auto;
+	margin: 0; 
+}
+.date .debut input, .date .fin input{
+	border: 1px solid #dddddd;
+	width: 7em;
+	margin: 0 4px 0 0;
+	font-size:1em;
+}
+.date .debut label{
+	width:14.5em;
+	margin-right: 10px;
+}
+.serie input,
+.serie select {
+	font-size: 1.1em;
+}
+/*
+.serie textarea {
+	font-size: 1.4em;
+}*/
+
+.champ select	{
+	width: 28em;
+}
+.champ textarea	{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.serie label	{
+	width: 13em; /* 15.5em */
+}
+form.narrow .serie label { width: 10em; }
+.serie .serie label { width: 10em; }
+.serie .label_long label	{
+	width: 24em;
+}
+.serie p label	{
+	width: auto;
+}
+.serie input	{
+	width: 20em; /* 24em */
+	float: left;
+}
+.serie input#RechercheDemandeCodeStructure,
+.serie input#RechercheDemandeCodeStage,
+.serie input#RechercheDemandeCodeSession {
+	width: auto;
+	margin-right: 5px;
+}
+form.narrow .serie input { width: 17em; }
+form#mot_de_passe .serie input	{
+	width: auto;
+}
+.serie input.submit {
+	width: auto;
+	position: relative;
+	top: -5px;
+}
+
+form.narrow .serie .w8em, .serie .w8em {
+	width: 6em;
+}
+
+.serie p input	{
+	width: 16.3em;
+}
+.serie select	{
+	width: 24.7em;
+	float: left;
+}
+form.narrow .serie select { width: 17em; }
+.serie select#recherche_agentsSeanceId {
+	width: auto;
+}
+.serie p select	{
+	width: 16.5em;
+}
+
+.serie.elargi select,
+.serie select.elargi	{
+	width: 36em;
+}
+.ligne	{
+	margin-top: 6px;
+	width: 10em !important;
+}
+.validation input,
+.validant	{
+	background: #007DC3 url(/cnfpt/css/images/fond-bouton-valider.gif) top right no-repeat;
+	padding-right: 28px;
+	border: 0;
+	padding-bottom: 2px;
+	overflow: visible;
+	cursor: pointer;
+}
+.validant 	{
+	float: left;
+}
+.validation span.effacer input	{}
+.affichage input	{
+	/*background: #007DC3;*/
+	/*background: #007DC3 url(/cnfpt/css/images/fond-bouton.gif) top right no-repeat;*/
+	/*padding-right: 10px;
+	border: 0;
+	padding-bottom: 2px;
+	overflow: visible;
+	cursor: pointer;*/
+}
+.checkbox .multiple_checkboxes  input,
+.radio input	{
+	margin: 2px 2px 0 0;
+	float: left;
+	width: auto;
+	border: 0;
+}
+.periode label,
+.checkbox .multiple_checkboxes  label,
+.radio label	{
+	float: left;
+	margin-right: 7px; /* 20px si prob */
+	width: auto;
+}
+.checkbox .multiple_checkboxes  label {
+	font-weight: normal;
+}
+.champ_avis_inscription_agent label	{
+	float: left;
+	margin: 0 0 7px 7px;
+	width: 330px;
+	font-size: 1.2em;
+}
+
+/*
+.centre4 #onglets .bloc_gauche fieldset fieldset .radio label {
+	width: 120px !important;
+}*/
+/*
+.centre4 #onglets .bloc_gauche fieldset fieldset .champ input,
+.centre4 #onglets .bloc_gauche fieldset fieldset .champ select,
+.centre4 #onglets .bloc_gauche fieldset fieldset .champ textarea,
+.centre4 #onglets .bloc_gauche fieldset fieldset .serie input,
+.centre4 #onglets .bloc_gauche fieldset fieldset .serie select {
+	border: 1px solid #B2B2B2;
+	font-size: 1em;
+	width: auto;
+}*/
+
+.resultats label,
+.resultats select,
+.resultats input	{
+	float: left;
+}
+.resultats label	{
+	font-size: 1.2em;
+	margin-right: 8px;
+	color: #76777a;
+	vertical-align: middle; 
+	position: relative;
+	top: 2px;
+}
+.resultats select	{
+	border: 1px solid #B2B2B2;
+	width: 13em;
+	font-size: 1.2em;
+	color: #76777a;
+	vertical-align: middle; 
+}
+.resultats input,
+.dates input.ok	{
+	border: 1px solid #B2B2B2;
+	color: #FFF;
+	background: #007DC3;
+	font-weight: bold;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+.dates	{}
+form .dates	{
+	width: 100%;
+}
+.dates input	{
+	border: 1px solid #B2B2B2;
+	width: 9em;
+	margin: 0 19px 0 6px;
+}
+.dates input.ok	{
+	width: auto;
+	height: 1.5em;
+}
+
+
+
+/* les tableaux de donnees */
+.contenu_overlay table,
+#onglets table{
+	width: 100%;
+	color: #555555;
+	position: relative; /* j'ai decommente cette ligne car a cette adresse : http://vt.dev.cnfpt.vtech.fr/fip_sessions/viewfi/agents/57 sous IE6 et IE7 le tableau n'apparaissait pas en entier */
+	padding: 0;
+	left: 0;
+	margin: 0 0 2em 0;
+	font-size: 1em;
+	border-collapse: collapse;
+	z-index: 999;
+	border: 1px solid #dfe1e2;
+}
+.contenu_overlay table {
+	margin: 15px 0;
+}
+#onglets table#import_inscriptions {
+	position:static;
+	width:100%;
+	margin:0;
+}
+.large #onglets table	{}
+
+.enveloppe img {
+	text-align: right;
+	margin: 0;
+}
+
+#onglets .double table	{
+	width: 30em;
+	border-top: 1px solid #D9D9D9;
+	left: 0;
+	margin: 0;
+}
+.contenu_overlay th,
+.contenu_overlay td,
+#onglets th,
+#onglets td	{
+	border: 1px solid #DFE1E2;
+	border-width: 0 1px 1px 0;
+	vertical-align: middle;
+	padding: 3px 10px;
+	text-align: left;
+}
+#onglets table#import_inscriptions th,
+#onglets table#import_inscriptions td {
+	padding: 3px 7px;
+}
+
+#onglets th button[type=submit] {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	color: #7F0E42;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: normal;
+	margin-left: 1em;
+	overflow: visible;
+	padding: 0;
+	margin: 0;
+}
+#onglets th button[type=submit]:hover {
+	color: #000;
+}
+#onglets th button.sortactif {
+	font-weight: bold;
+}
+#onglets .double th,
+#onglets .double td	{}
+#onglets .double th	{}
+#onglets .double .entete th,
+#onglets .double .total th	{
+	border-bottom: 1px solid #D9D9D9;
+	padding-left: 10px;
+	background: transparent;
+}
+#onglets .double .entete th.premier,
+#onglets .double .total th	{
+	border-left: 1px solid #D9D9D9;
+}
+#onglets th.premier	{}
+th img	{
+}
+.entete th img	{
+	float: right;
+	margin-top: -8px;
+}
+.impair	{
+	background: #FFF;
+}
+tr.errors{
+	background: #FCE5E8;
+}
+tr.attente{
+	color: red;
+}
+tr.reponse{
+	color: green;
+}
+.etai1	{
+	width: 25%;
+}
+#onglets table.fixe	{
+	margin-left: 100px;
+	width: 66.6em;
+	margin: 12px 0 24px 65px;/* 12px 0 24px 100px*/
+}
+.paginer	{
+	text-align: right;
+}
+
+#div_loader {
+	left: 50% !important;
+	top: 50% !important;
+	margin: 0px 0 0 50px !important;
+	background: transparent !important;
+}
+
+#div_loader img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -35px 0 0 -35px;
+}
+
+input#FipSessionStrTitre,
+input#FipSessionSubmittedfile {
+	border: 1px #ccc solid;
+	background: #fff;
+}
+
+#lucarne_fiche {
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 15px 20px 10px;
+	background: #007dc3 url(/cnfpt/css/images/message_ok.jpg) repeat-x 0 0;
+	width: 300px;
+	min-height: 80px;
+	border: 2px #fff solid;
+	position: absolute;
+	left: 380px;
+	top: 420px;
+	display: inline; /* Pour IE6 */
+	z-index: 1000;
+}
+
+#lucarne_fiche.lucarne_fiche_large{
+	width: 440px;
+	left: 300px;
+}
+
+body.administration #lucarne_fiche {
+	top: 20%;
+}
+#flashMessage,
+#messages_flash	{
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 10px 20px 10px;
+	background: #017DC3 url(/cnfpt/css/images/message_ok.jpg) repeat-x 0 0;
+	width: 280px;
+	height: auto;
+	overflow: visible;
+	border: 2px #fff solid;
+	position: absolute;
+	left: 380px;
+	top: 380px;
+	display: inline; /* Pour IE6 */
+	z-index: 1000;
+	-webkit-box-shadow: 0px 0px 5px 1px #555555;
+	-moz-box-shadow: 0px 0px 5px 1px #555555;
+	box-shadow: 0px 0px 5px 1px #555555;
+}
+#flashMessage {
+	left: 50%;
+	top: 50%;
+	margin: -2em 0 0 -140px;
+	height: 4em;
+	overflow: auto;
+}
+#flashMessage.large {
+	width: 500px;
+	margin: -3em 0 0 -250px;
+	height: 6em;
+}
+#flashMessage.main-success {
+	background: none repeat scroll 0 0 #82CE76;
+	color: #FFFFFF;
+}
+#flashMessage.main-error { 
+	background: none repeat scroll 0 0 #FCE5E8;
+	color: #E2001A;
+}
+#flashMessage.main-warning { 
+	background: none repeat scroll 0 0 #FDEDD3;
+	color: #F45703;
+}
+#flashMessage.main-info {
+	background: none repeat scroll 0 0 #E8F5FE;
+	color: #333333;
+}
+#flashMessage .fermer {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-decoration: none;
+}
+#flashMessage .message_fermer,
+#messages_flash	.message_fermer {
+	display: block;
+	margin: 10px 0 0;
+	color: #fff;
+}
+
+select#recherche_sessionsIdentifiant {float:none;}
+
+.droite4 .dd_itineraire a {
+	font-size: .9em;
+	text-decoration: none;
+}
+
+.droite4 .dd_itineraire a:hover {
+	text-decoration: underline;
+}
+
+.droite4 dd li.domaine a {
+	margin-right: 5px;
+}
+.droite4 .familles.last-niv li {
+	margin-left: 15px;
+	font-size: .9em;
+}
+
+.droite4 .familles.last-niv li a {
+	font-size: 1.2em;
+}
+
+
+#onglets .telephone {width: 82px;}
+
+
+
+/*-----------------------------------------*/
+/*-------- Editeur riche de texte ---------*/
+/*-----------------------------------------*/
+
+#onglets #MaildocInteg_edit .champ span {
+	width: auto;
+	min-width: 17px;
+	/*width: 48px !important;*/
+	float: left !important;
+}
+#onglets #MaildocInteg_edit .champ p {
+	clear: left;
+}
+#onglets .champ #input_data_message_message_parent span {
+	width: auto;
+	float: none;
+}
+
+#onglets .champ .MaildocInteg_edit #input_data_maildoc_inter_content_parent {
+	width: auto !important;
+}
+
+.MaildocInteg_edit span.mceEditor table,
+span.mceEditor table {
+	clear: both !important;
+	width: 100% !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.defaultSkin table.mceLayout tr.mceFirst td {
+
+}
+
+.defaultSkin table.mceToolbar,
+.defaultSkin tr.mceFirst .mceToolbar tr td,
+.defaultSkin tr.mceLast .mceToolbar tr td {
+	border: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.MaildocInteg_edit span.mceEditor .defaultSkin {
+	width: auto !important;
+}
+
+.MaildocInteg_edit span.mceEditor .defaultSkin table.mceLayout tr.mceFirst td,
+span.mceEditor .defaultSkin table.mceLayout tr.mceFirst td{
+	border-top: 1px solid #CCC !important;
+}
+.MaildocInteg_edit span.mceEditor .defaultSkin td.mceToolbar,
+span.mceEditor .defaultSkin td.mceToolbar {
+	padding-top: 1px !important;
+	vertical-align: top !important;
+}
+.MaildocInteg_edit span.mceEditor .defaultSkin .mceLeft,
+span.mceEditor .defaultSkin .mceLeft {
+	text-align: left !important;
+}
+.MaildocInteg_edit span.mceEditor .defaultSkin .mceToolbar,
+span.mceEditor .defaultSkin .mceToolbar {
+	height: 26px !important;
+}
+.MaildocInteg_edit span.mceEditor .defaultSkin table td,
+span.mceEditor .defaultSkin table td {
+	vertical-align: middle !important;
+}
+
+.defaultSkin table.mceLayout tr.mceFirst td {
+
+}
+
+.defaultSkin span {
+	width: auto !important;
+}
+
+#MaildocInter_edit .mceToolbarStart td span table {
+	width: auto !important;
+}
+
+.defaultSkin span.mceIcon, .defaultSkin img.mceIcon {
+	display: block !important;
+	width: 20px !important;
+	height: 20px !important;
+}
+
+.defaultSkin .mce_forecolor span.mceAction {
+	background-position: -720px 0 !important;
+}
+
+.validation span {
+	width: auto !important;
+}
+
+.champ .editor_div {
+	width: auto !important;
+	min-width: 510px;
+	width: 510px;
+	margin: 0;	
+}
+
+
+/*----------------------------------------------------------*/
+table#contact_agents {
+	width: 100%;
+}
+table#contact_agents thead th {
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+}
+table#contact_agents tbody td,
+table#contact_agents tbody th {
+	text-align: left;
+	padding: 5px;
+}
+table#contact_agents tbody td{
+	text-align: center;
+}
+
+
+
+/* ---------------------------------------------------------- */
+/* http://vt.dev.national.cnfpt.vtech.fr/cnfpt/tableaux/acheminer_document/documents/657 */
+#selection_documents {}
+#selection_documents h2 {
+	background: none repeat scroll 0 0 transparent;
+	color: #7F0E42;
+	font-family: 'HelveticaNarrow-Bold',Arial,Helvetica,sans-serif;
+	font-size: 1.7em;
+}
+#selection_documents h3 {
+	color: #7F0E42;
+	font-size: 1.3em;
+	margin: 10px 0 2px 0;
+}
+#selection_documents h4 {
+	color: #7F0E42;
+}
+#selection_documents ul#liste_documents li {
+	padding: 2px 0;
+	margin: 0 0 0 15px;
+}
+#selection_documents ul#liste_documents li input {
+	margin: 0 5px 0 0;
+}
+
+
+/* uploader revisitée  */
+div.uploader_container {
+	clear: both;
+	font-weight: bold;
+	padding: 10px 0 0 185px;
+	overflow: auto;
+}
+div.uploader_preview  {
+	border-color:  #DFDFDF #BFBFBF #BFBFBF #DFDFDF;
+	border-style: solid;
+	border-width: 1px;
+	background: #EFEFEF;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+	display: inline;
+	overflow: hidden;
+	zoom: 1;
+	clear: none;
+	position: relative;
+}
+
+.formidable .group-name div.file,
+.formidable div.uploader div.uploader_preview div.thumb{
+	width: auto;
+	height: auto;
+	float: none;
+	font-size: 0.9em;
+	margin: 0;
+	padding: 3px 0 0 0;
+	border: 0;
+	background: transparent;
+	overflow: hidden;
+	zoom: 1;
+	position: relative;
+	display: block;
+	margin: 0 0 0 60px;
+}
+.formidable div.group div.group .group-name div.file {
+	font-size: 0.8em;
+	margin: 0;
+	text-align: left;
+}
+.tree_form .formidable div.group div.group .group-name div.file {
+	margin: 0;
+}
+.formidable .group-name div.file input {
+	width: auto !important;
+}
+div.uploader_preview div.thumb{
+	float: left;
+	margin: 10px 0 5px 10px;
+	display: inline;
+	zoom: 1;
+}
+div.uploader_preview .tools{
+	float: right;
+	width: 20px;
+}
+div.uploader_preview a.uploader_delete{
+	float: right;
+	width: 20px;
+	margin: 7px 3px 0 0;
+	display: block;
+	cursor: pointer;
+}
+div.uploader_preview a.move {
+	cursor: move;
+}
+div.uploader_preview h4,
+div.uploader_preview .var{
+	clear: left;
+	height: 1.2em;
+	line-height: 1.2em;
+	margin: 0 5px;
+	overflow: hidden;
+	background: none;
+	padding: 0;
+	top: 80px!important;
+	left: 0!important;
+	width: 90px;
+	position: absolute;
+}
+
+/* progress_bar revisitée  */
+.uploader_progress{
+	clear: none;
+	float: none !important;
+	font-size: 0.9em;
+	margin: 0 0 0 8px;
+	line-height: 16px;
+	margin: 0;
+	overflow: auto;
+	width: auto !important;
+	max-width: 300px !important;
+}
+.uploader_progress .bar {
+	display: block;
+	border: 1px solid #000;
+	float: left;
+	line-height: 15px;
+	margin: 0 10px 0 0;
+	background: #fff;
+	position: relative;
+	width: 99% !important;
+	max-width: 300px !important;
+}
+.uploader_progress .bar span{
+	display: block;
+	float: left;
+	background: url(/space/img/css/fnd/fnd_bar.gif);
+}
+.uploader_progress .bar em{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-weight: bold;
+	text-align: center;
+	width: 100% !important;
+}
+
+.pair_notes {
+	background-color: #f6f6f6; 
+}
+
+.impair_notes { 
+}
+
+#onglet_notes div {
+	background-color: #f6f6f6;
+}
+
+/* #onglets_notes legend { */
+/*     color: #8a3f69; */
+/*     font-size: 1.4em; */
+/*     font-weight: bold; */
+/*     padding: 12px 4px 0 0; */
+/*     margin: 0px 0px 0px 17px; */
+/* } */
+
+.infos_notes p {
+	font-weight: bold;
+    margin-left: 15px;
+}
+.profil_agent_box_left {
+	width:460px;
+	height:250px;
+	background-color:gainsboro;
+	float:left;
+	padding-top: 10px;
+	border: 1px solid gray;
+	vertical-align:top;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.profil_agent_box_right {
+	width:460px;
+	height:250px;
+	background-color:gainsboro;
+	float:right;
+	padding-top: 10px;
+	border: 1px solid gray;
+	vertical-align:top;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.profil_agent_box_right_actif {
+	width:460px;
+	height:250px;
+	background-color:gainsboro;
+	float:right;
+	padding-top: 10px;
+	border: 2px solid #8a3f69;
+	vertical-align:top;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+.profil_agent_box_titel{
+	margin-top:10px;
+	color:#8a3f69;
+	font-size:1.4em;
+	width:13.5em;
+	margin-left:10px;
+	font-weight:bold;
+}

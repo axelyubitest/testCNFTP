@@ -1,0 +1,1280 @@
+*	{
+	margin: 0;
+	padding: 0;
+}
+body	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 62.5%;
+	color: #000;
+	background: #E9F0F9 url(/cnfpt/css/images/fond-page.gif) top repeat-x;
+	text-align: center;
+}
+img,
+fieldset	{
+	border: none;
+}
+li	{
+	list-style-type: none;
+}
+a	{
+	color: #000;
+	text-decoration: underline;
+}
+a:hover,
+a:focus	{
+	text-decoration: none;
+}
+hr	{
+	position: absolute;
+	left: -4444px;
+}
+
+.both {clear:both;}
+
+.capitale {
+	text-transform: uppercase;
+}
+
+textarea {
+	overflow: auto;
+	font-family: inherit;
+	font-size: 1.1em;
+	overflow: auto;
+}
+
+/* fondations generales */
+/* Redmine #13267 */
+.page	{
+	width: 1000px;
+	margin: 0;
+	text-align: left;
+	position: relative;
+}
+.header	{
+	background: /*#33518D*/ url(/cnfpt/css/images/fond-en-tete.jpg) right bottom no-repeat;
+	margin-bottom: 15px;
+	padding-top: 0;
+}
+#navigation	{
+	display: none;
+}
+
+.contenu	{
+	background: url(/cnfpt/css/images/fond-contenu.gif) top right repeat-y;
+	clear: both;
+	margin-top: 48px;
+	overflow: hidden;
+	padding: 2px 1px 17px 28px;
+	width: 1300px;
+}
+/*
+.contenu h1 {
+	border-bottom: none;
+	color:#002570;
+	font-size:1.7em;
+	line-height:12px;
+	margin-left: 0;
+	padding-left: 0;
+}*/
+
+.footer	{
+	background: url(/cnfpt/css/images/fond-contenu.gif) top left no-repeat;
+	padding-top: 30px;
+	text-align: center;
+	height: 1.7em;
+	margin-bottom: 12px;
+}
+
+
+/* fondations generales non identifie  */
+.public .header	{
+	background-image: url(/cnfpt/css/images/fond-en-tete-accueil.jpg);
+}
+.inter .header	{
+	background-image: url(/cnfpt/css/images/fond-en-tete.jpg);
+}
+.public #navigation,
+.inter #navigation	{
+	display: none;
+}
+
+
+/* colonnades */
+.gauche,
+.gauche2	{
+	float: left;
+	width: 22.6em;
+	max-width: 950px;
+	margin-top: 11px;
+}
+
+.centre1,
+.droite1	{
+	float: left;
+	width: 41.3em;
+	max-width: 950px;
+	margin-top: 42px;
+}
+.droite1	{
+	display: none;
+}
+.gauche2	{
+	margin-top: -20px;
+	max-width: 950px;
+}
+.centre2	{
+	float: left;
+	width: 52.3em;
+	max-width: 950px;
+}
+.droite2	{
+	display: none;
+}
+.centre3	{
+	float: left;
+	width: 61.3em;
+	max-width: 950px;
+}
+.droite3	{
+	display: none;
+}
+.centre4	{
+	float: left;
+	width: 73.1em;
+	max-width: 950px;
+}
+
+.large	{
+	float: left;
+	width: 940px;
+}
+
+.droite4	{
+	display: none;
+}
+
+.droite4.ins_coll	{
+	display: none;
+}
+
+
+/* en-tete */
+.header p a	{
+	display: none;
+}
+.header p{
+	overflow: hidden;
+	zoom: 1;
+	background: #33518D;
+	padding: 2px 0 2px 0;
+}
+.header div p img{
+	/* On fixe l'image statiquement pour éviter qu'il glisee à cause de la marge de l'élément d'après*/
+	position: static;
+	margin-top: 23px;
+  	margin-left: 27px;
+}
+.header div p{
+	padding: 0;
+}
+.header div p a	{
+	float: none;
+	padding: 0;
+}
+.header strong	{
+	float: left;
+	width: 820px;
+	text-align: right;
+	background: #33518D;
+}
+.header div	{
+	margin-top: 2px;
+	padding-bottom: 6px;
+	background: #A1C069 url(/cnfpt/css/images/fond-logos.gif) left bottom no-repeat;
+	width: 41.1em;
+	max-width: 1000px;
+}
+.header div p	{
+	width: 411px;
+}
+.header div p.delegation	{
+	width: 236px;
+}
+.header img	{
+	float: left;
+}
+
+body.admin #fip_page .header div {
+	background: #652D90 url(/cnfpt/css/images/fond-logos-admin.gif) left bottom no-repeat;
+	margin-top:0px;
+}
+
+body.admin #fip_page .header h1	{
+	color: #fff;
+	font-size: 1.3em;
+	background: #652D90;
+	margin-left:144px;
+}
+
+	
+
+
+/* footer */
+.footer span	{
+	background: #A1C069;
+}
+
+
+
+/* classes transverses */
+.lienBarre	{
+	background: url(/cnfpt/css/images/fond-point.gif) center repeat-x;
+	text-align: right;
+}
+.adroite	{
+	text-align: right;
+}
+.ensuite	{
+	margin-top: 14px;
+}
+.suite	{
+	margin-top: 30px;
+}
+.desuite	{
+	padding-bottom: 8px;
+}
+.recuperation	{
+	padding-left: 92px;
+}
+.zoom	{
+	padding-left: 7px;
+}
+img.zoom	{
+	position: absolute;
+	width: 62px;
+	height: 63px;
+	background: url(/cnfpt/css/images/picto-loupe.png) top left no-repeat;
+	margin: -7px 0 0 -25px;
+}
+.pseudoListe	{
+	background: url(/cnfpt/css/images/puce-cercle.gif) top left no-repeat;
+	padding-left: 15px;
+}
+.question	{
+	background: url(/cnfpt/css/images/fond-picto-interrogation.gif) 26px 26px no-repeat;
+}
+.droite4 .question	{
+	background-position: 8px 10px;
+}
+.localisation	{
+	background: url(/cnfpt/css/images/puce-cercle-noir.gif) top left no-repeat;
+	padding-left: 12px;
+}
+.entree	{
+	background: #EAEBEC url(/cnfpt/css/images/fond-bloc-a.gif) top left no-repeat;
+	padding: 16px 16px 0 16px;
+}
+.acces	{
+	border-top: 1px solid #B2B2B2;
+	background: #F7fAFD url(/cnfpt/css/images/fond-bloc-b.gif) bottom left no-repeat;
+	padding: 20px 0 22px 29px;
+}
+.correspondants	{
+	border-top: 1px solid #B2B2B2;
+	background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;
+	padding: 30px 16px;
+}
+.reference	{
+	border-top: 1px solid #B2B2B2;
+	background: url(/cnfpt/css/images/fond-bloc-d.gif) bottom left no-repeat;
+	padding: 2px 16px 20px 16px;
+}
+.inscription	{
+	background: url(/cnfpt/css/images/puce-chevron.gif) left center no-repeat;
+	padding-left: 10px;
+}
+.compte	{
+	background: url(/cnfpt/css/images/fond-bloc-c.gif) top left no-repeat;
+	padding-top: 9px;
+}
+.encompte	{
+	background: url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;
+	padding: 0 16px 20px 16px;
+}
+.enregistrement	{
+	background: #F7fAFD url(/cnfpt/css/images/fond-bloc-e.gif) bottom left no-repeat;
+	padding: 27px 40px 22px 0;
+}
+.etapes	{
+	background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) top left no-repeat;
+	margin: 12px 0 0 62px;
+}
+.etapesInt	{
+	background: url(/cnfpt/css/images/fond-illu-larges.jpg) bottom left no-repeat;
+	padding: 22px 0 110px 0;
+}
+.illustration_moncompte	{
+	background: #F5F5F5 url(/cnfpt/css/images/fond-bloc-i.gif) bottom left no-repeat;
+	margin: 12px 0 0 62px;
+}
+.illustration_moncompteInt	{
+	background: url(/cnfpt/css/images/fond-illu-moncompte.jpg) top left no-repeat;
+	padding: 273px 0 22px 0;
+}
+.texte{
+	background: #F7fAFD url(/cnfpt/css/images/fond-bloc-e.gif) bottom left no-repeat;
+	padding: 27px 40px 22px 0;
+}
+
+
+/* affichage interne d'un popup modal */
+#lucarne	{
+	display: block;
+	position: absolute;
+	left: -4444px; /* -4444px */
+	top: 0;
+	z-index: 1000;
+	width: 226px;
+	padding-bottom: 10px;
+	background: url(/cnfpt/css/images/fond-lucarne.gif) bottom right no-repeat;
+}
+.canopee #lucarne	{
+	left: 70px;
+}
+.canopee2 #lucarne	{
+	left: 170px;
+	top: 470px;
+}
+#lucarne a img	{
+	position: absolute;
+}
+#lucarne .lucarne	{
+	background: url(/cnfpt/css/images/fond-lucarne.gif) top left no-repeat;
+	padding: 15px 0 4px 15px;
+}
+.marquage	{
+	border-bottom: 1px solid #B2B2B2;
+	padding-left: 24px;
+}
+.marquage h3	{
+	float: left;
+	padding-right: 10px;
+}
+#lucarne .lucarne a img	{
+	right: -4px;
+	top: -4px;
+}
+.lagent	{
+	border-bottom: 1px solid #B2B2B2;
+	padding: 20px 20px 40px 24px;
+	background: url(/cnfpt/css/images/puce-cercle.gif) 11px 20px no-repeat;
+}
+#lucarne .lucarne p	{
+	text-align: center;
+}
+#lucarne .lucarne p a	{
+	padding-left: 10px;
+	background: url(/cnfpt/css/images/fond-lien.gif) bottom left no-repeat;
+	display: block;
+	position: relative;
+	top: -2px;
+	margin: auto;
+	width: 13em; /* necessaire pour IE */
+}
+#lucarne .lucarne p a span	{
+	padding-right: 10px;
+	background: url(/cnfpt/css/images/fond-lien.gif) bottom right no-repeat;
+	display: block;
+	padding-bottom: 3px;
+}
+
+#lucarne .lucarne p a span.TerSel	{
+	padding-right: 10px;
+	background: url(/cnfpt/css/images/fond-lien.gif) bottom right no-repeat;
+	display: block;
+	padding-bottom: 3px;
+}
+
+/* au fil des blocs : accueils */
+.entree p	{
+	margin-top: 17px;
+}
+.entree div	{
+	padding: 0 16px 27px 0;
+	background: url(/cnfpt/css/images/fond-bloc-a.gif) bottom left no-repeat;
+	margin: 0 -16px;
+}
+.entree div.decoration,
+.entree ul.decoration	{
+	padding: 0 16px 66px 0;
+	background: url(/cnfpt/css/images/fond-illu-etroites.jpg) bottom left no-repeat;
+	margin: 0 -16px;
+}
+.entree .lienBarre a	{
+	background: #EAEBEC;
+}
+.centre1 h2.partie,
+.droite1 h2	{
+	padding-left: 10px;
+	margin-left: 35px;
+}
+.centre1 div {
+	margin-left: 55px;
+}
+
+.textes_infos_fip {
+	padding-top: 15px;}
+
+.textes_infos_fip h2 {
+	color: #B05D10;
+	font-size: 1.8em;
+	margin: 15px 0 0 47px;
+	padding: 0 0 0 5px;
+}
+.textes_infos_fip h3 {
+	color: #33518d;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin: 15px 0 0 37px;
+	padding: 0 0 0 15px;
+	border-bottom: 1px #cdcdcb solid;
+	background: transparent url(/cnfpt/css/images/puce_cercle_bleu_fonce.gif) no-repeat left center;
+}
+.textes_infos_fip h4 {
+	color: #33518d;
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin: 15px 0 0 37px;
+	padding: 0 0 0 0px;
+}
+.textes_infos_fip h5 {
+	color: #000;
+	font-size: 1.1em;
+	line-height: 1.3em;
+	margin: 15px 0 0 37px;
+	padding: 0 0 0 0px;
+	border-bottom: 1px #cdcdcb solid;
+}
+
+.textes_infos_fip h3 .top, .textes_infos_fip h4 .top, .textes_infos_fip h5 .top {
+	float: right;
+	padding: 5px 0 0 0;
+}
+.textes_infos_fip p {
+	font-size: 1.2em;
+}
+
+.textes_infos_fip dl {
+	font-size: 1.3em;
+}
+
+.textes_infos_fip .telecharger dt {
+	background: transparent url(/cnfpt/css/images/puce-petit-cercle_gris_clair.gif) no-repeat 0 5px;
+}
+
+.textes_infos_fip dd a {
+	font-size: .9em;
+}
+
+.textes_infos_fip p {
+	margin: 5px 0 5px 47px;
+	padding: 0 0 0 5px;
+}
+
+.textes_infos_fip .telecharger, .textes_infos_fip ul {
+	margin: 15px 0 0 52px;
+}
+
+.textes_infos_fip ol {
+	margin: 15px 0 0 72px;
+}
+
+.textes_infos_fip .telecharger dt{
+	padding: 0 0 0 10px;
+	color: #7e7e7e;
+	font-weight: bold;
+}
+.textes_infos_fip ul a{
+	color: #7e7e7e;
+	font-weight: bold;
+}
+.textes_infos_fip .telecharger dd {
+	padding: 0 0 5px 20px;
+}
+.textes_infos_fip ul li{
+	padding: 0 0 5px 10px;
+	background: transparent url(/cnfpt/css/images/puce-petit-cercle_gris_clair.gif) no-repeat 0 5px;
+	font-size:1.2em;
+}
+.textes_infos_fip ol li{
+	list-style-type:decimal;
+	font-size: 1.2em;
+}
+.textes_infos_fip ol li li{
+	list-style-type:decimal;
+	font-size: 1em;
+}
+.textes_infos_fip ul li li{
+	padding: 0 0 5px 0px;
+	background: none;
+	liste-style: square;
+	font-size: 1em;
+}
+
+.textes_infos_fip .savoir_plus {
+	margin: 0 0 0 37px;
+	padding: 10px 0 10px 15px;
+	background: #f2f5fc;
+}
+
+.textes_infos_fip .savoir_plus dt {
+	background: transparent url(/cnfpt/css/images/puce-petit-cercle_gris_clair.gif) no-repeat 0 5px;
+}
+
+.textes_infos_fip .savoir_plus dt {
+	padding: 0 0 0 10px;
+	color: #7e7e7e;
+	font-weight: bold;
+}
+
+.textes_infos_fip .savoir_plus dd {
+	padding: 0 0 5px 20px;
+}
+
+
+.textes_infos_fip .nav_infos {
+	margin: 30px 0 0 37px;
+	border-bottom: 1px #cdcdcb solid;
+}
+
+.textes_infos_fip .nav_infos .top {
+	float: right;
+	position: relative;
+	top: -4px;
+	right: 0;
+	padding: 5px 0 0 0;
+}
+
+.textes_infos_fip .nav_infos p {
+	margin: 0;
+	padding: 0;
+}
+
+.textes_infos_fip .nav_infos p a {
+	color: #b05f10;
+	text-decoration: none;
+	font-size: .9em;
+	font-weight: bold;
+}
+
+.textes_infos_fip .nav_infos p a.precedent {
+	margin: 7px 0 0 0;
+	float: left;
+}
+
+.textes_infos_fip .nav_infos p a.suivant {
+	margin: 7px 0 0 0;
+	float: right;
+}
+
+
+
+.centre1 div.dates	{
+	margin-left: 65px;
+}
+.centre1 h3.repartie	{
+	margin-top: 20px;
+}
+.centre1 p	{
+	margin-top: 22px;
+	overflow: hidden;
+}
+.centre1 .lienBarre	{
+	margin-left: 35px;
+}
+.centre1 p img	{
+	float: left;
+	margin: 0 10px 5px 0;
+}
+.droite1 .acces	{
+	margin-left: 35px;
+}
+.droite1 .acces div	{
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.droite1 .acces div p	{
+	float: right;
+	width: 14.2em;
+}
+.droite1 .acces .pseudoListe	{
+	margin: 0 0 20px -10px;
+}
+.droite1 h2.part	{
+	margin-top: 27px;
+}
+.droite1 .correspondants	{
+	margin-left: 35px;
+	padding-top: 13px;
+}
+.gauche h2.part	{
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.reference .impart	{
+	margin-left: -6px;
+}
+.gauche .reference p	{
+	margin-top: 17px;
+}
+.centre1 h3.impart	{
+	margin-left: 45px;
+}
+.centre1 .inscription	{
+	margin: 5px 0 0 17px;
+}
+.centre1 div.rebord	{
+	margin: 30px 0 0 10px;
+	padding-left: 35px;
+	background: url(/cnfpt/css/images/fond-picto-interrogation.gif) top left no-repeat;
+}
+.centre1 .rebord div	{
+	border-left: 1px solid #B2B2B2;
+	margin: 0;
+	padding-top: 17px;
+}
+.rebord h2.partie	{
+	margin: 0;
+}
+.rebord h3.impart	{
+	margin-left: 10px;
+}
+.rebord h4.pseudoListe	{
+	margin: 12px 0 0 10px;
+}
+.rebord p	{
+	margin: 17px 0 0 25px;
+}
+.rebord p.lienBarre	{
+	margin: 11px 0 0 0;
+	position: relative;
+	top: 6px;
+}
+.droite1 .compte	{
+	margin-left: 35px;
+}
+.droite1 h2.cartouche	{
+	margin-left: -20px;
+}
+.droite1 h2.premier	{
+	position: relative;
+	top: -14px;
+}
+.droite1 .correspondant	{
+	margin-top: 7px;
+	padding-left: 15px;
+}
+.droite1 .encompte .adroite	{
+	margin: 10px 0;
+}
+.droite1 .tableau	{
+	margin: 10px 0;
+}
+.detail	{
+	background: url(/cnfpt/css/images/fond-tableau.gif) top left no-repeat;
+	margin: 0 -15px;
+	border-bottom: 1px solid #B2B2B2;
+	padding: 0 0 12px 65px;
+}
+.detail p	{
+	margin-top: 3px;
+}
+.compte .premier	{
+	border: 0;
+}
+.detail h4	{
+	float: left;
+	position: relative;
+	left: -42px;
+	margin-right: -42px;
+	background: #EAEBEC;
+	padding: 0 2px;
+}
+
+
+
+/* au fil des blocs : pages interieures */
+.ariane	{
+	display: none;
+}
+.impression	{
+	display: none;
+}
+.centre3 h1	{
+	padding-left: 37px;
+}
+.demarger	{
+	margin-left: -50px;
+}
+.consigne	{
+	margin: 18px 0 0 69px;
+	padding-bottom: 9px;
+}
+.champ{
+	font-size: 1.1em;
+}
+.champ,
+.serie	{
+	overflow: hidden;
+	margin-top: 8px;
+}
+.champ_auto_complete {
+	overflow: visible;
+	clear: both;
+	position: relative;
+	z-index: 5;
+}
+#onglets .champ	{
+	position: relative;
+	margin-left: -34px;
+}
+
+
+
+#onglets .champ.ico_session {
+	line-height: 31px;
+}
+
+#onglets .champ.ico_session label span {
+	display: inline;
+	margin: 0 0 0 152px;
+	padding: 0 0 0 0;
+	width: 35px;
+	height: 31px;
+	background: url(/cnfpt/css/images/fnd_session.png) no-repeat left top;
+}
+.input.text {
+	width: 450px;
+}
+.dateduau1 {display:inline;overflow:auto;width:150px;}
+.dateduau2 {display:inline;overflow:auto;width:150px;}
+#onglets .champ	.aide	{
+	position: relative;
+	left: -200px;
+	float: right;
+	width: 15px;
+	height: 15px;
+}
+
+#onglets .champ span	{
+	width: 270px;
+	float: left;
+}
+#onglets .date span, #onglets .date .date-picker-control	{
+	width: auto;
+	float: left;
+}
+
+#onglets .serie	{
+	margin-left: -60px;
+}
+#onglets .voir_fiche{
+	 float: right;
+	 padding-right:185px;
+	 font-size: 1.1em;
+	 background:transparent url(/cnfpt/css/images/fond-fieldset-large.gif) repeat-x scroll 100% 7px;
+	 margin: 40px 0 20px 0;
+	 position: relative;
+	 left: 23px;
+	 width: auto;
+}
+#onglets .voir_fiche a{
+	background: #F7FAFD;
+	padding: 0 5px;
+}
+.serie p	{
+	float: right;
+	display: inline;
+}
+
+
+.serie p strong	{
+	float: left;
+	font-size: 1.1em;
+}
+
+.serie .etat	{
+	float: right;
+	width: auto;
+	margin: 0 0 0 20px;
+}
+
+.serie .session	{
+	float: left;
+	width: auto;
+	margin: 0 0 0 110px !important;
+	margin: 0 0 0 50px;
+}
+.serie .nomarge{
+	margin: 0 0 0 72px!important;
+	margin: 0 0 0 72px;
+}
+.serie .session label	{
+	margin: 0 10px 0 10px;
+	cursor: pointer;
+}
+.serie .session input	{
+	float: left;
+	width: 70px;
+	margin: 0 0 0 0px;
+}
+.serie .cat input,
+.serie .etat input {
+	float: left;
+	width: auto;
+	margin: 0 5px 0 10px !important;
+	margin: 0 0 0 10px;
+	border: none;
+}
+
+.serie .cat label,
+.serie .etat label	{
+	float: left;
+	margin: 0; 
+}
+.serie .loc	{
+	float: left;
+	width: auto;
+	margin: 0 0 0 10px;
+}
+
+.serie .loc select	{
+	width: 165px;
+}
+.serie .localisation	{
+	float: left;
+	display: inline;
+	background: none;
+	font-weight: bold;
+	font-size: 1.1em;
+	margin: 0 10px 0 0;
+}
+.auchamp	{
+	padding-left: 170px;
+	margin-top: 8px;
+}
+.demarquer	{
+	display: none;
+}
+#onglets .demarquer	{
+	margin: 0;
+	padding-right: 86px;
+}
+.validation	{
+	float: right;
+}
+.affichage	{
+	overflow: hidden;
+	padding-right: 20px;
+}
+.validation span	{
+	/*margin-left: 10px;*/
+	padding-left: 14px;
+	float: left;
+	background: url(/cnfpt/css/images/fond-bouton-valider.gif) top left no-repeat;
+	z-index: 2;
+}
+.validant span	{
+	padding-top: 1px;
+}
+.affichage span	{
+	margin-left: 10px;
+	padding-left: 10px;
+	float: right;
+	background: url(/cnfpt/css/images/fond-bouton.gif) top left no-repeat;
+}
+.validation span.effacer	{
+	padding-left: 25px;
+	background-image: url(/cnfpt/css/images/fond-bouton-effacer.gif);
+	margin-right: 8px;
+}
+.centre2 h1	{
+	margin-left: 37px;
+	padding-left: 15px; /* 10px si problemes... */
+}
+.centre2 h2.empart	{
+	margin: 20px 0 0 47px;
+}
+.parametre	{
+	padding-top: 12px;
+}
+.resultats	{
+	margin-left: -50px;
+	overflow: hidden;
+	width: 62.6em;
+}
+
+.large .resultats	{
+	margin-left: -50px;
+	overflow: hidden;
+	width: 890px;
+}
+
+.resultats strong	{
+	width: 20%;
+	float: left;
+}
+.resultats p	{
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+.resultats div	{
+	float: right;
+}
+.centre4 #onglets .demarquer	{
+	padding: 10px 20px 0 0;
+}
+.droite3 .etapes p,
+.leCritere	{
+	background: url(/cnfpt/css/images/fond-etape.gif) top left no-repeat;
+	margin-top: 22px;
+	padding: 0 29px;
+}
+.droite3 .etapes p.premier,
+.droite4 .premier	{
+	margin-top: 0;
+}
+.illustration	{
+	background: #EAEBEC url(/cnfpt/css/images/fond-bloc-c.gif) bottom left no-repeat;
+}
+.droite2 .illustration	{
+	margin: 12px 0 0 26px;
+	text-align: center;
+	border-top: 1px solid #D9D9D9;
+	padding-left: 1px;
+	padding-bottom: 24px;
+	/*height: 550px;*/
+}
+.droite4 .illustration	{
+	background: #F5F5F5 url(/cnfpt/css/images/fond-bloc-h.gif) bottom left no-repeat;
+	margin-left: 44px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	/*min-height: 450px;*/
+}
+.droite4 .illustration .illustration {
+	background: none;
+	margin-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 1em;
+}
+
+.droite4 .illustration.photo	{
+	padding-top: 0;	
+}
+
+.droite4 .illustrante	{
+	border-top: 1px solid #D9D9D9;
+	padding: 0 0 24px 1px;
+	/*margin-top: 33px;*/
+	text-align: center;
+}
+.classeur{
+	background: #fff;
+	margin: 0 0 -1px 44px;/*33px 0 0 44px*/
+	border: 1px solid #D9D9D9;
+	border-right: 0;
+	padding-bottom: 18px;
+	line-height: 20px;
+}
+.classeur p{
+	padding: 0 39px;
+	margin-top: 13px;
+	font-size: 1.1em;
+}
+.classeur p.vide{
+	background: url(/cnfpt/css/images/ico-classeur.gif) no-repeat 10px 50%;
+}
+.criteres	{
+	background: #F7FAFD;
+	margin: 0 0 -1px 44px;/*33px 0 0 44px*/
+	border: 1px solid #D9D9D9;
+	border-right: 0;
+	padding-bottom: 18px;
+}
+.criteres p	{
+	padding: 0 29px;
+	margin-top: 13px;
+}	
+.criteres p.modification	{
+	margin: 14px 0 0 29px;
+	border-top: 1px solid #D9D9D9;
+	padding: 9px 0 0 0;
+}
+.instance	{
+	padding: 8px;
+}
+.etape_validation .instance {
+	padding: 8px 8px 8px 170px;
+	background: url(/cnfpt/css/images/fond-picto-agent-inscrit.gif) no-repeat 130px 50%;
+}
+.relance	{
+	border-bottom: 1px solid #E8EAEB;
+	margin: 16px 0 17px -71px;
+	overflow: hidden;
+}
+.relance a	{
+	float: right;
+	padding-left: 14px;
+	background: url(/cnfpt/css/images/fond-bouton-relancer.gif) top left no-repeat;
+}
+.relance a span	{
+	float: left;
+	padding: 1px 30px 2px 0;
+	background: url(/cnfpt/css/images/fond-bouton-relancer.gif) top right no-repeat;
+}
+
+
+.relance_bleu	{
+	border-bottom: 1px solid #E8EAEB;
+	margin: 16px 0 17px -71px;
+	overflow: hidden;
+}
+.relance_bleu a	{
+	text-decoration: none;
+	float: right;
+	padding-left: 14px;
+	background: url(/cnfpt/css/images/fond-bouton-valider.gif) top left no-repeat;
+}
+.relance_bleu a span	{
+	color: #fff;
+	font-weight: bold;
+	float: left;
+	padding: 1px 30px 2px 0;
+	background: url(/cnfpt/css/images/fond-bouton-valider.gif) top right no-repeat;
+}
+.retour,
+.abandon	{
+	float: left;
+	margin-right: 10px;
+	background: url(/cnfpt/css/images/fond-bouton-retour.gif) top left no-repeat;
+	padding-left: 30px;
+}
+.retour span,
+.abandon span	{
+	float: left;
+	background: url(/cnfpt/css/images/fond-bouton-retour.gif) top right no-repeat;
+	padding: 1px 10px 2px 0;
+}
+.abandon	{
+	background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);
+	padding-left: 10px;
+}
+.abandon span	{
+	background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);
+}
+
+.validation .inputabandon	{
+	background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);
+	padding-left: 10px;
+}
+.validation .abando	{
+	margin-right:10px;
+	background-image: url(/cnfpt/css/images/fond-bouton-abandon.gif);
+}
+
+.nouvel {
+	float: left;
+}
+
+.creer_agent  {
+	float: left;
+	height: 17px;
+	margin: 0 10px 0 20px;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-creer.gif) top left no-repeat;
+}
+
+input.creer_agent  {
+	float: left;
+	height: 17px;
+	margin: 0 10px 0 0px;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-creer.gif) top left no-repeat !important;
+}
+
+.creer_agent span,
+span input.creer_agent {
+	float: left;
+	height: 17px;
+	line-height: 17px;
+	padding: 0 10px 0 0px;
+	color: #9cc463;
+	/*color: #3397cf;*/
+	font-weight: bold;
+	font-size: 1.1em;
+	background: url(/cnfpt/css/images/fond-bouton-creer.gif) top right no-repeat !important;
+}
+
+.creer_contact {
+	float: left;
+	height: 17px;
+	margin: 0 10px 0 20px;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-creer_1.gif) top left no-repeat;
+}
+.creer_pdf {
+	float: left;
+	height: 17px;
+	margin: 0 0px 0 20px;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-pdf.gif) top left no-repeat;
+}
+
+.creer_csv {
+	float: left;
+	height: 17px;
+	margin: 0 10px 0 0px;
+	padding-left: 30px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-csv.gif) top left no-repeat;
+}
+.creer_contact span	{
+	float: left;
+	height: 17px;
+	line-height: 17px;
+	padding: 0 10px 0 0px;
+	/*color: #9cc463;*/
+	color: #3397cf;
+	font-weight: bold;
+	font-size: 1.1em;
+	background: url(/cnfpt/css/images/fond-bouton-creer.gif) top right no-repeat;
+}
+
+
+.replier {
+	float: left;
+	height: 17px;
+	margin: 0 10px 0 20px;
+	padding-left: 20px;
+	text-decoration: none;
+	background: url(/cnfpt/css/images/fond-bouton-effacer.gif) top left no-repeat;
+}
+.replier span	{
+	float: left;
+	height: 17px;
+	line-height: 17px;
+	padding: 0 10px 0 10px;
+	/*color: #9cc463;*/
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.1em;
+	background: url(/cnfpt/css/images/fond-bouton-effacer.gif) top right no-repeat;
+}
+
+
+.illustration.illustrante .nom_agent {
+	margin: 40px 0 0 0;
+	text-align: left;
+}
+
+.illustration.illustrante .nom_agent p.leCritere {
+	margin: 0;
+	padding: 0 29px 5px 30px;
+	font-size: 1.1em;
+	color: #007DC3;
+	background:transparent url(/cnfpt/css/images/fond-etape.gif) no-repeat scroll left top;
+}
+
+.leCritere a {
+	text-decoration: underline !important;
+}
+
+.illustration.illustrante .nom_agent p.nom {
+	line-height: 22px;
+	margin-left: 5px;
+	padding: 0 0 0 25px;
+	font-size: 1.1em;
+	background: url(/cnfpt/css/images/picto-agent-1.gif) no-repeat 0px -2px;
+}
+
+.illustration.illustrante .nom_agent dl {
+	font-size: 1em;
+}
+
+.illustration.illustrante .nom_agent dd {
+	font-weight: normal;
+}
+
+.illustration.illustrante .nom_agent dt {
+	margin: 5px auto auto auto;
+}
+
+.coordonnees {
+	margin: 30px 0 0 0;
+	padding: 0 10px 10px 29px;
+}
+
+.coordonnees p {
+	margin: 0 0 5px 0;
+	color:#000;
+	font-weight: normal;
+}
+
+.coordonnees p span {
+	color:#B05D10;
+	font-weight:bold;
+}
+
+
+.coordonnees p a {
+	text-decoration: none;
+}
+
+
+.centre4 #onglets.txt .onglet {
+	padding: 0 0 20px 0px;
+}
+
+.centre4 #onglets.txt .onglet .longlet {
+	/*height: auto !important;
+	height: auto;
+	height: 140px;
+	min-height: 140px;*/
+}
+
+.centre4 #onglets.txt .onglet .longlet h4 {
+	margin: 10px 0 0 1px;
+	background: transparent url(/cnfpt/css/images/fond-fieldset-large.gif) no-repeat left top;
+	font-size: 1em;
+}
+
+.centre4 #onglets.txt .onglet .longlet h4 span {
+	position: relative;
+	top: -9px;
+	padding: 0 5px 0 84px;
+	font-size: 1.4em;
+	font-weight: bold;
+	border: none;
+	color: #a7601e;
+	background: #F7FAFD url(/cnfpt/css/images/fond-titre_marron.gif) no-repeat 0 5px;
+}
+.centre4 #onglets.txt .onglet .longlet .tableau_demande_dispense h4.legendaire {
+	padding: 0;
+	margin: 10px 0 0 -29px;
+	width: 706px;
+}
+.centre4 #onglets.txt .onglet .longlet h4.legendaire span {
+	font-size: 1.3em;
+}
+.centre4 #onglets.txt .onglet .longlet p {
+	margin: 0 100px 5px 86px;
+	font-size: 1.1em;
+	color: #00246F;
+}

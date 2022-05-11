@@ -1,0 +1,98 @@
+/**
+ * pages-rules.css
+ * 
+ * Liste l'ensemble des règles CSS spécifiques à des pages de l'application
+ */
+ 
+/** Changement de SIRET **/
+#changement-siret-tab-collectivites .serie {
+	font-size: 1em;
+	
+}
+
+#changement-siret-tab-collectivites .serie label {
+	font-weight: bold;
+}
+
+#changement-siret-tab-collectivites .error-message {
+	clear: both;
+	margin-left:212px;
+}
+
+#changement-siret-tab-collectivites tr > td {
+	vertical-align: top;
+}
+
+/** Transfert inscriptions **/
+.TransfertInscription #contenu_page_ajax .resultats {
+	position: relative;
+	width : 970px !important;
+}
+
+.TransfertInscription #contenu_page_ajax .affichage {
+	position: relative;
+	width : 970px !important;
+}
+
+/** Constitution des groupes **/
+.groupes #form_recherche_agents #recherche_agentsCollectiviteId {
+	width: 20em !important;
+}
+
+.groupes #form_recherche_agents #recherche_agentsAgentId {
+	width: 20em !important;
+}
+
+.groupes #form_recherche_agents #recherche_agentsEtat {
+	width: 20em !important;
+}
+
+.groupes #form_recherche_agents .categories input, .groupes #form_recherche_agents .categories .categorie {
+	width: 14px;
+}
+
+.groupes #form_recherche_agents .recherche_agents-date {
+	width : 20em !important;
+}
+
+.groupes fieldset.tableau {
+	padding-bottom: 0 !important;
+}
+
+.groupes .zone_action_top {
+	margin : 0 0 1em 0;
+}
+
+.groupes .zone_action_top #btn_toggle_deploy {
+	margin-left: 0 !important;
+}
+
+.groupes .resultats {
+	height : 25px;
+}
+
+.groupes .resultats div {
+	top : 0px !important;
+}
+
+.groupes .affichage {
+	clear: both;
+}
+
+/** Gestion des mails et des documents **/
+.list_email_left > .select select {
+	margin-bottom:15px;
+}
+.maildoc-parameters .maildoc-regroupement-entete {
+	font-weight: bold;
+	margin-left: 90px;
+}
+.maildoc-parameters .maildoc-regroupement-body, .libelle-information {
+	margin : 0 0 0 90px !important;
+}
+.maildoc-parameters .maildoc-regroupement-element {
+	background: none;
+}
+.maildoc-parameters .maildoc-regroupement-element input[type="radio"] {
+	margin-right: 5px;
+}
